@@ -14,12 +14,6 @@
 .App-header {
   /*background-color: #282c34;*/
   background-color: #228844;
-/*  [theme.breakpoints.down('sm')]: {
-    min-height: calc(100vh - 48px);
-  },
-  [theme.breakpoints.up('sm')]: {
-    min-height: calc(100vh - 64px);
-  },*/
   min-height: calc(100vh - 64px);
 
 
