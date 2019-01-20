@@ -23,8 +23,23 @@ class Home extends Component {
             Welcome to my homepage!
           </p>
           <p>
-          I'm Ira. I'm an urbanist, software developer, and coffee enthusiast.
+            I'm Ira.
           </p>
+          <Grid style={{maxHeight:"20vh", minHeight:"20vh"}} container 
+                direction="row"
+                justify="center"
+                alignItems="flex-start">
+            <Grid item xs={6}>    
+          <p style={{textAlign: "right", padingRight: 0}}>
+           I'm an&nbsp; 
+           </p>
+           </Grid>
+           <Grid item xs={6}>
+           <p className="marquee" style={{textAlign: "left", paddingLeft: 0}}> 
+           urbanist. <br /> software developer. <br /> coffee enthusiast.
+          </p>
+          </Grid>
+          </Grid>
           <p>
             <span role="img" aria-label="a series of emojis">
             🚲 🛴 🚎 🚂 🌁 ☕️

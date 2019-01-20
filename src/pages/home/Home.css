@@ -3,3 +3,23 @@
 .Main-photo {
   height: 40vmin;
 }
+
+
+@keyframes marquee {
+    0%   { margin-top: 20vh }
+    100% { margin-top: -20vh }
+}
+
+.marquee {
+    overflow: hidden !important;
+    white-space: nowrap;
+    animation: marquee 1s linear infinite;
+    -webkit-animation: marquee 1s linear infinite;
+    min-height: 20vh;
+    max-height: 20vh;
+}
+
+.marquee:hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
