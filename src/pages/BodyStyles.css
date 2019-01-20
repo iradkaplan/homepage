@@ -10,6 +10,7 @@
   color: white;
 }
 .navbar-shim {
+  background-color: #228844;
   min-height: 64px;
 }
 
@@ -20,7 +21,7 @@
 }*/
 
 @media (max-width: 599px) {
-  .App-header{
+  .App-body{
     min-height: calc(100vh - 56px);
   }
   .navbar-shim {
