@@ -25,26 +25,27 @@ class Home extends Component {
           <p>
             I'm Ira.
           </p>
-          <Grid style={{maxHeight:"20vh", minHeight:"20vh"}} container 
+          <Grid container 
                 direction="row"
                 justify="center"
                 alignItems="flex-start">
-            <Grid item xs={6}>    
-          <p style={{textAlign: "right", padingRight: 0}}>
-           I'm an&nbsp; 
-           </p>
-           </Grid>
-           <Grid item xs={6}>
-           <p className="marquee" style={{textAlign: "left", paddingLeft: 0}}> 
-           urbanist. <br /> software developer. <br /> coffee enthusiast.
-          </p>
+            <Grid item xs={6} sm={4} md={6}>    
+              <p className="subheader" style={{textAlign: "right"}}>
+                I'm an&nbsp; 
+              </p>
+            </Grid>
+            <Grid item xs={6} sm={8} md={6}>
+              <p className=" subheader" style={{textAlign: "left"}}> 
+                urbanist. <span role="img" aria-label="city emoji">🌇</span> <br /> 
+                software developer. <span role="img" aria-label="laptop emoji">💻</span> <br /> 
+                transit geek. <span role="img" aria-label="trolleybus emoji">🚎</span> <br /> 
+                coffee enthusiast. <span role="img" aria-label="coffee emoji">☕️</span> <br /> 
+                bicyclist. <span role="img" aria-label="bicycle emoji">🚲</span> <br /> 
+                scooterer. <span role="img" aria-label="kick scooter emoji">🛴</span> <br /> 
+                hiker. <span role="img" aria-label="hiking boot emoji">🥾</span> <br /> 
+              </p>
+            </Grid>
           </Grid>
-          </Grid>
-          <p>
-            <span role="img" aria-label="a series of emojis">
-            🚲 🛴 🚎 🚂 🌁 ☕️
-            </span>
-          </p>
           <p class="body-text">
           This website exists for a couple of reasons. For starters, it's a sandbox for me to play around with web technologies and a place for me to showcase my work.
           </p>
