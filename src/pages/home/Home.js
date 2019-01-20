@@ -50,7 +50,7 @@ class Home extends Component {
           This website exists for a couple of reasons. For starters, it's a sandbox for me to play around with web technologies and a place for me to showcase my work.
           </p>
           <p className="body-text">
-          But there's also a bigger reason. Over the last few years, problems with social media and the centralization of the web have become increasingly clear. Just a few companies control a staggering amount of the content on today's web. When they get bought or sold or go bankrupt, a lot of that content is lost. In the meantime, they act as censors on the bounds of acceptable content. This site is my effort to do a small part to bring back a more rambunctious version of the web, like it was in the 90s and early 2000s. 
+          But I also hope it can have a bit of the playful spirit of the web in the 90s and early 2000s. Send me your web rings and your low-quality GIFs! 
           </p>
           </Grid>
         </Grid>
