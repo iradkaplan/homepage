@@ -9,9 +9,6 @@ class App extends Component {
       <div className="App">
         <NavBar />
         <Home />
-        <p>
-        I bootstrapped this site using Create React App. 
-        </p>
       </div>
     );
   }

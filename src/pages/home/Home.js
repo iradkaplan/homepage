@@ -8,6 +8,8 @@ class Home extends Component {
 
   render() {
     return (
+      <>
+      <Grid item xs={12} className="navbar-shim" />
       <div className="App-header">
         <Grid container 
               direction="row"
@@ -24,19 +26,20 @@ class Home extends Component {
           I'm Ira. I'm an urbanist, software developer, and coffee enthusiast.
           </p>
           <p>
-            <span role="img" aria-label="bike and scooter emojis">
-            🚲 🛴 🚲 🛴 🚲 🛴
+            <span role="img" aria-label="a series of emojis">
+            🚲 🛴 🚎 🚂 🌁 ☕️
             </span>
           </p>
           <p class="body-text">
-          This website exists for a couple of reasons: It's a sandbox for me to play around with web technologies. It's a place for me to showcase my work.
+          This website exists for a couple of reasons. For starters, it's a sandbox for me to play around with web technologies and a place for me to showcase my work.
           </p>
           <p class="body-text">
-          Additionally, problems with social media and the centralization of the web have become increasingly clear. This site is me doing a small part to bring back the freespirited web of the 90s and early 2000s. If you know of any web rings I should join, drop me a line! 
+          But there's also a bigger reason. Over the last few years, problems with social media and the centralization of the web have become increasingly clear. Just a few companies control a staggering amount of the content on today's web. When they get bought or sold or go bankrupt, a lot of that content is lost. In the meantime, they act as censors on the bounds of acceptable content. This site is my effort to do a small part to bring back a more rambunctious version of the web, like it was in the 90s and early 2000s. 
           </p>
           </Grid>
         </Grid>
       </div>
+      </>
     );
   }
 }
