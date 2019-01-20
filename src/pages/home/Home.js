@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Grid from '@material-ui/core/Grid';
-import photo from '../../static/IMG_4917.jpg';
+import photo from './photo.jpg';
 import './Home.css';
 
 

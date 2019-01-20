@@ -24,12 +24,7 @@ const styles = {
 
 class NavBar extends React.Component {
   state = {
-    auth: true,
     anchorEl: null,
-  };
-
-  handleChange = event => {
-    this.setState({ auth: event.target.checked });
   };
 
   handleMenu = event => {
@@ -41,7 +36,7 @@ class NavBar extends React.Component {
   };
   render() {
     const { classes } = this.props;
-    const { auth, anchorEl } = this.state;
+    const { anchorEl } = this.state;
     const open = Boolean(anchorEl);
 
     return (
