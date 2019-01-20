@@ -10,7 +10,7 @@ class Home extends Component {
     return (
       <>
       <Grid item xs={12} className="navbar-shim" />
-      <div className="App-header">
+      <div className="App-body">
         <Grid container 
               direction="row"
               justify="space-evenly"

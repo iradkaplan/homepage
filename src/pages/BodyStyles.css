@@ -1,0 +1,42 @@
+.App-body {
+  /*background-color: #282c34;*/
+  background-color: #228844;
+  min-height: calc(100vh - 64px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10pt + 2vmin);
+  color: white;
+}
+.navbar-shim {
+  min-height: 64px;
+}
+
+/*@media (max-width: 959px)and (orientation: landscape) {
+  .App-header{
+    min-height: calc(100vh - 48px);
+  }
+}*/
+
+@media (max-width: 599px) {
+  .App-header{
+    min-height: calc(100vh - 56px);
+  }
+  .navbar-shim {
+    min-height: 56px;
+  }
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.body-content {
+  padding: 1vmin 5vmin 0 5vmin ;
+}
+
+.body-text {
+  font-size: calc(8pt + 1vmin);
+  text-align: left;
+}
