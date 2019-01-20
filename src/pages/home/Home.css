@@ -22,7 +22,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(10pt + 2vmin);
   color: white;
 }
 /*@media (max-width: 959px)and (orientation: landscape) {
@@ -39,6 +39,15 @@
 
 .App-link {
   color: #61dafb;
+}
+
+.body-content {
+  padding: 1vmin 5vmin 0 5vmin ;
+}
+
+.body-text {
+  font-size: calc(8pt + 1vmin);
+  text-align: left;
 }
 
 @keyframes App-logo-spin {
