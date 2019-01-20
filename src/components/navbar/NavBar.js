@@ -5,6 +5,8 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import MenuItem from '@material-ui/core/MenuItem';
+import Menu from '@material-ui/core/Menu';
 import { Link } from "react-router-dom";
 
 const styles = {
@@ -15,30 +17,80 @@ const styles = {
     textAlign: "left",
     flexGrow: 1,
   },
+  link: {
+    textDecoration: "none",
+  },
 };
 
-function NavBar(props) {
-  const { classes } = props;
+class NavBar extends React.Component {
+  state = {
+    auth: true,
+    anchorEl: null,
+  };
 
-  return (
-    <div className={classes.root}>
-      <AppBar position="fixed" color="default">
-        <Toolbar>
-          <Typography variant="h6" color="inherit" className={classes.title} >
-          Ira Kaplan
-          </Typography>
-            <Link to="/">
-              <Button>Home</Button>
-            </Link>
-            <Link to="/resume/">
-              <Button>Resume</Button>
-            </Link>
-        </Toolbar>
-      </AppBar>
-    </div>
-  );
+  handleChange = event => {
+    this.setState({ auth: event.target.checked });
+  };
+
+  handleMenu = event => {
+    this.setState({ anchorEl: event.currentTarget });
+  };
+
+  handleClose = () => {
+    this.setState({ anchorEl: null });
+  };
+  render() {
+    const { classes } = this.props;
+    const { auth, anchorEl } = this.state;
+    const open = Boolean(anchorEl);
+
+    return (
+      <div className={classes.root}>
+        <AppBar position="fixed" color="default">
+          <Toolbar>
+            <Typography variant="h6" color="inherit" className={classes.title} >
+            Ira Kaplan
+            </Typography>
+              <Link to="/" className={classes.link}>
+                <Button>Home</Button>
+              </Link>
+              <Link to="/resume/" className={classes.link}>
+                <Button>Resume</Button>
+              </Link>
+              <div>
+                <Button
+                  aria-owns={open ? 'menu-appbar' : undefined}
+                  aria-haspopup="true"
+                  onClick={this.handleMenu}
+                  color="inherit"
+                >
+                  Projects
+                </Button>
+                <Menu
+                  id="menu-appbar"
+                  anchorEl={anchorEl}
+                  anchorOrigin={{
+                    vertical: 'top',
+                    horizontal: 'right',
+                  }}
+                  transformOrigin={{
+                    vertical: 'top',
+                    horizontal: 'right',
+                  }}
+                  open={open}
+                  onClose={this.handleClose}
+                >
+                <Link to="/projects/homepage/" className={classes.link}>
+                  <MenuItem onClick={this.handleClose}>This Website</MenuItem>
+                  </Link>
+                </Menu>
+              </div>
+          </Toolbar>
+        </AppBar>
+      </div>
+    );
+  }
 }
-
 NavBar.propTypes = {
   classes: PropTypes.object.isRequired,
 };
