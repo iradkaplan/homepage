@@ -15,7 +15,7 @@ class Homepage extends Component {
               direction="row"
               justify="space-evenly"
               alignItems="center">
-       	  <Grid item xs={4}>
+       	  <Grid item xs={10} sm={8} md={6} lg={4}>
           <p className="body-text">
        	  I made this website in January 2019 as a place to document some of my work. 
           <br />(Expect periodic updates to the Projects list!) 

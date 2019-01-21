@@ -38,7 +38,7 @@ class Home extends Component {
                 </p>
               </Grid>
               <Grid item xs={6} sm={8} md={6}>
-                <p className=" subheader" style={{textAlign: "left"}}> 
+                <p className="subheader" style={{textAlign: "left"}}> 
                   urbanist. <span role="img" aria-label="city emoji">🌇</span> <br /> 
                   software developer. <span role="img" aria-label="laptop emoji">💻</span> <br /> 
                   transit geek. <span role="img" aria-label="trolleybus emoji">🚎</span> <br /> 
