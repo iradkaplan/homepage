@@ -1,1 +1,15 @@
 @import "../../BodyStyles.css";
+
+.screenshot {
+  width: 100%;
+}
+
+/*@media (min-width: 960px) {
+	.screenshot {
+	  width: 60vw;
+	}
+}*/
+
+.image-paper {
+	padding: 10px;
+}
