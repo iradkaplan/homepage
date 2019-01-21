@@ -75,6 +75,9 @@ class NavBar extends React.Component {
                   open={open}
                   onClose={this.handleClose}
                 >
+                <Link to="/projects/sf-rcv/" className={classes.link}>
+                  <MenuItem onClick={this.handleClose}>SF Vote Diagrams</MenuItem>
+                  </Link>
                 <Link to="/projects/homepage/" className={classes.link}>
                   <MenuItem onClick={this.handleClose}>This Website</MenuItem>
                   </Link>

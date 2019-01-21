@@ -5,6 +5,7 @@ import NavBar   from './components/navbar/NavBar';
 import Home     from './pages/home/Home';
 import Resume   from './pages/resume/Resume';
 import Homepage from './pages/projects/homepage/Homepage';
+import SankeyRCV from './pages/projects/sankeyrcv/SankeyRCV';
 
 class App extends Component {
   render() {
@@ -15,6 +16,7 @@ class App extends Component {
           <Route path="/" exact component={Home} />
           <Route path="/resume/" component={Resume} />
           <Route path="/projects/homepage/" component={Homepage} />
+          <Route path="/projects/sf-rcv/" component={SankeyRCV} />
         </div>
       </Router>
     );
