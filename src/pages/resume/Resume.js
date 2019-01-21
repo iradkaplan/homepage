@@ -17,7 +17,7 @@ class Resume extends Component {
               justify="space-evenly"
               alignItems="center">
        	  <Grid item>
-       	  <Link to="/Ira Kaplan Resume.pdf" target="_blank">
+       	  <Link to="/Ira Kaplan Resume.pdf" target="_blank" className="link">
        	  	<img src={resume_image} className="Resume-image" alt="My resume. Click to open PDF." />
        	  	<br />
        	  	Click to open PDF.
