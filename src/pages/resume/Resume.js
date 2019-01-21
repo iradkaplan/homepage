@@ -20,7 +20,9 @@ class Resume extends Component {
        	  <Link to="/Ira Kaplan Resume.pdf" target="_blank" className="link">
        	  	<img src={resume_image} className="Resume-image" alt="My resume. Click to open PDF." />
        	  	<br />
-       	  	Click to open PDF.
+       	  	<span className="caption">
+              Click to open PDF.
+            </span>
        	  	</Link>
        	  </Grid>
         </Grid>

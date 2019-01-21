@@ -15,12 +15,15 @@ class Home extends Component {
               direction="row"
               justify="space-evenly"
               alignItems="center">
-          <Grid item xs={12} sm={6} className="body-content">
+          <Grid item xs={12} sm={5} className="body-content">
             <img src={photo} className="Main-photo" alt="Me" />
           </Grid>
-          <Grid item xs={12} sm={6} className="body-content">
+          <Grid item xs={12} sm={7} className="body-content">
             <p>
-              Welcome to my homepage!
+              Welcome to my homepage! <br />
+              <span className="caption">
+                (We're bringing them back in 2019)
+              </span>
             </p>
             <p>
               I'm Ira.

@@ -1,6 +1,6 @@
 .App-body {
   /*background-color: #282c34;*/
-  background-color: #228844;
+  background-color: #2292bf;
   min-height: calc(100vh - 64px);
   display: flex;
   flex-direction: column;
@@ -10,7 +10,7 @@
   color: white;
 }
 .navbar-shim {
-  background-color: #228844;
+  background-color: #2292bf;
   min-height: 64px;
 }
 
@@ -40,4 +40,9 @@
 .body-text {
   font-size: calc(8pt + 1vmin);
   text-align: left;
+}
+
+.caption {
+  font-size: calc(4pt + 1vmin);
+  color: white;
 }

@@ -4,7 +4,7 @@
   height: 40vmin;
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 960px) {
 	.Main-photo {
 	  height: 60vh;
 	}
