@@ -46,3 +46,12 @@
   font-size: calc(4pt + 1vmin);
   color: white;
 }
+
+.link {
+  text-decoration: none;
+  color: white;
+}
+
+.linkWithUnderline {
+  color: white;
+}
