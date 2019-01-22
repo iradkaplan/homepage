@@ -34,15 +34,15 @@ class Home extends Component {
               >
                 <Grid item xs={6} sm={4} md={6}>
                   <p className="subheader" style={{ textAlign: "right" }}>
-                    I'm an{" "}
+                    I'm an&nbsp;
                   </p>
                 </Grid>
                 <Grid item xs={6} sm={8} md={6}>
                   <p className="subheader" style={{ textAlign: "left" }}>
                     urbanist.{" "}
-                    <span role="img" aria-label="city emoji">
+                    {/* <span role="img" aria-label="city emoji">
                       🌇
-                    </span>{" "}
+                    </span>{" "} */}
                     <br />
                     software developer.{" "}
                     <span role="img" aria-label="laptop emoji">
