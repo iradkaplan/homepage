@@ -58,7 +58,7 @@ class SankeyRCV extends Component {
               <p className="body-text">
                 In the June 5, 2018, Mayoral election, two candidates, Jane Kim
                 and Mark Leno, followed a strategy in which each one asked their
-                first-place voter to vote for the other in second place. After
+                first-place voters to vote for the other in second place. After
                 the polls closed, the first vote count showed Mark Leno barely
                 edging out London Breed, thanks in large part to second-place
                 votes from Jane Kim voters. However, the closeness of the vote
@@ -94,9 +94,18 @@ class SankeyRCV extends Component {
               style={{ marginBottom: "2vh" }}
             >
               <p className="body-text">
-                San Francisco published new vote counts on its website every day
-                at 4pm. To help explain how the vote count was progressing, I
-                made an R script that took the raw data and used the{" "}
+                The city Department of Elections published new vote counts on
+                its{" "}
+                <Link
+                  to="//sfelections.sfgov.org/june-5-2018-election-results-summary"
+                  target="_blank"
+                  className="linkWithUnderline"
+                >
+                  website
+                </Link>{" "}
+                every day at 4pm. To help explain how the vote count was
+                progressing, I made an R script that took the raw data and used
+                the{" "}
                 <Link
                   to="//cran.r-project.org/web/packages/rcv/index.html"
                   target="_blank"
@@ -123,9 +132,9 @@ class SankeyRCV extends Component {
                   target="_blank"
                   className="linkWithUnderline"
                 >
-                  here.
+                  here
                 </Link>{" "}
-                View auto-generated interactive versions of the diagrams for
+                and view auto-generated interactive versions of the diagrams for
                 June 5{" "}
                 <Link
                   to="//iradkaplan.github.io/sf-rcv-201806/output/interactive_chart_20180605_4.html"
@@ -140,9 +149,9 @@ class SankeyRCV extends Component {
                   target="_blank"
                   className="linkWithUnderline"
                 >
-                  here.
-                </Link>{" "}
-                (May not work well on mobile.)
+                  here
+                </Link>
+                . (May not work well on mobile.)
               </p>
             </Grid>
           </Grid>
