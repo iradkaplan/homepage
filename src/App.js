@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import './App.css';
-import NavBar   from './components/navbar/NavBar';
-import Home     from './pages/home/Home';
-import Resume   from './pages/resume/Resume';
-import Homepage from './pages/projects/homepage/Homepage';
-import SankeyRCV from './pages/projects/sankeyrcv/SankeyRCV';
+import "./App.css";
+import NavBar from "./components/navbar/NavBar";
+import Home from "./pages/home/Home";
+import Resume from "./pages/resume/Resume";
+import Homepage from "./pages/projects/homepage/Homepage";
+import SankeyRCV from "./pages/projects/sankeyrcv/SankeyRCV";
 
 class App extends Component {
   render() {
