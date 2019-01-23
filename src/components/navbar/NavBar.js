@@ -37,7 +37,6 @@ class NavBar extends React.Component {
   render() {
     const { classes } = this.props;
     const { anchorEl } = this.state;
-    const open = Boolean(anchorEl);
 
     return (
       <div className={classes.root}>
@@ -46,15 +45,15 @@ class NavBar extends React.Component {
             <Typography variant="h6" color="inherit" className={classes.title}>
               Ira Kaplan
             </Typography>
-            <Link to="/" className={classes.link}>
-              <Button>Home</Button>
-            </Link>
-            <Link to="/resume/" className={classes.link}>
-              <Button>Resume</Button>
-            </Link>
+            <Button component={Link} to="/">
+              Home
+            </Button>
+            <Button component={Link} to="/resume/">
+              Resume
+            </Button>
             <div>
               <Button
-                aria-owns={open ? "menu-appbar" : undefined}
+                aria-owns={anchorEl ? "menu-appbar" : undefined}
                 aria-haspopup="true"
                 onClick={this.handleMenu}
                 color="inherit"
@@ -64,25 +63,23 @@ class NavBar extends React.Component {
               <Menu
                 id="menu-appbar"
                 anchorEl={anchorEl}
-                anchorOrigin={{
-                  vertical: "top",
-                  horizontal: "right"
-                }}
-                transformOrigin={{
-                  vertical: "top",
-                  horizontal: "right"
-                }}
-                open={open}
+                open={Boolean(anchorEl)}
                 onClose={this.handleClose}
               >
-                <Link to="/projects/sf-rcv/" className={classes.link}>
-                  <MenuItem onClick={this.handleClose}>
-                    SF Vote Diagrams
-                  </MenuItem>
-                </Link>
-                <Link to="/projects/homepage/" className={classes.link}>
-                  <MenuItem onClick={this.handleClose}>This Website</MenuItem>
-                </Link>
+                <MenuItem
+                  component={Link}
+                  to="/projects/sf-rcv/"
+                  onClick={this.handleClose}
+                >
+                  SF Vote Diagrams
+                </MenuItem>
+                <MenuItem
+                  component={Link}
+                  to="/projects/homepage/"
+                  onClick={this.handleClose}
+                >
+                  This Website
+                </MenuItem>
               </Menu>
             </div>
           </Toolbar>
