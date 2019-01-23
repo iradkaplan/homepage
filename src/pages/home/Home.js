@@ -35,7 +35,7 @@ class Home extends Component {
                 <Grid item xs={6} sm={4} md={6}>
                   <p
                     className="subheader"
-                    style={{ textAlign: "right", lineHeight: "1.4em" }}
+                    style={{ textAlign: "right", lineHeight: "1.2em" }}
                   >
                     I'm an&nbsp;
                   </p>
@@ -43,7 +43,7 @@ class Home extends Component {
                 <Grid item xs={6} sm={8} md={6}>
                   <p
                     className="subheader"
-                    style={{ textAlign: "left", lineHeight: "1.4em" }}
+                    style={{ textAlign: "left", lineHeight: "1.2em" }}
                   >
                     urbanist.{" "}
                     <span role="img" aria-label="city emoji">
