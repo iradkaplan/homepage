@@ -32,7 +32,7 @@ class Home extends Component {
                 justify="center"
                 alignItems="flex-start"
               >
-                <Grid item xs={6} sm={4} md={6}>
+                <Grid item xs={4} md={6}>
                   <p
                     className="subheader"
                     style={{ textAlign: "right", lineHeight: "1.2em" }}
@@ -40,7 +40,7 @@ class Home extends Component {
                     I'm an&nbsp;
                   </p>
                 </Grid>
-                <Grid item xs={6} sm={8} md={6}>
+                <Grid item xs={8} md={6}>
                   <p
                     className="subheader"
                     style={{ textAlign: "left", lineHeight: "1.2em" }}
