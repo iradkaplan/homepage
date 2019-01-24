@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import { Provider } from "react-redux";
+import { Provider, connect } from "react-redux";
 import "./App.css";
 import NavBar from "./components/navbar/NavBar";
 import Home from "./pages/home/Home";
@@ -9,9 +9,9 @@ import Homepage from "./pages/projects/homepage/Homepage";
 import SankeyRCV from "./pages/projects/sankeyrcv/SankeyRCV";
 
 class App extends Component {
-  render({ store }) {
+  render() {
     return (
-      <Provider store={store}>
+      <Provider store={this.props.store}>
         <Router>
           <div className="App">
             <NavBar />
