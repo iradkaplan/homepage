@@ -5,3 +5,7 @@ export const openMenu = anchor => ({
   type: OPEN_MENU,
   anchor: anchor
 });
+
+export const closeMenu = () => ({
+  type: CLOSE_MENU
+});

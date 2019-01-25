@@ -9,7 +9,7 @@ import MenuItem from "@material-ui/core/MenuItem";
 import Menu from "@material-ui/core/Menu";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
-import { openMenu, CLOSE_MENU } from "../../actions";
+import { openMenu, closeMenu } from "../../actions";
 
 const styles = {
   root: {
@@ -35,7 +35,7 @@ let createHandlers = function(dispatch) {
 
   let handleClose = () => {
     // this.setState({ projectMenuAnchor: null });
-    dispatch({ type: CLOSE_MENU });
+    dispatch(closeMenu());
   };
 
   return {
@@ -98,14 +98,14 @@ class NavBar extends React.Component {
                 <MenuItem
                   component={Link}
                   to="/projects/sf-rcv/"
-                  onClick={this.handleClose}
+                  onClick={this.handlers.handleClose}
                 >
                   SF Vote Diagrams
                 </MenuItem>
                 <MenuItem
                   component={Link}
                   to="/projects/homepage/"
-                  onClick={this.handleClose}
+                  onClick={this.handlers.handleClose}
                 >
                   This Website
                 </MenuItem>
