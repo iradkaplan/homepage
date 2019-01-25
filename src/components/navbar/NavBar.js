@@ -8,6 +8,8 @@ import Typography from "@material-ui/core/Typography";
 import MenuItem from "@material-ui/core/MenuItem";
 import Menu from "@material-ui/core/Menu";
 import { Link } from "react-router-dom";
+import { connect } from "react-redux";
+import { openMenu, CLOSE_MENU } from "../../actions";
 
 const styles = {
   root: {
@@ -22,21 +24,48 @@ const styles = {
   }
 };
 
+let createHandlers = function(dispatch) {
+  // let onClick = function(node, data) {
+  //   dispatch(actions.nodeClicked(data));
+  // };
+  let handleMenu = event => {
+    // this.setState({ projectMenuAnchor: event.currentTarget });
+    dispatch(openMenu(event.currentTarget));
+  };
+
+  let handleClose = () => {
+    // this.setState({ projectMenuAnchor: null });
+    dispatch({ type: CLOSE_MENU });
+  };
+
+  return {
+    handleMenu,
+    handleClose
+    // other handlers
+  };
+};
+
 class NavBar extends React.Component {
-  state = {
-    anchorEl: null
-  };
+  constructor(props) {
+    super(props);
+    this.handlers = createHandlers(this.props.dispatch);
+  }
+  // state = {
+  //   projectMenuAnchor: null
+  // };
+  // store = this.props.store;
+  // handleMenu = event => {
+  //   this.setState({ projectMenuAnchor: event.currentTarget });
+  //   // store.dispatch(openMenu(event.currentTarget));
+  // };
 
-  handleMenu = event => {
-    this.setState({ anchorEl: event.currentTarget });
-  };
-
-  handleClose = () => {
-    this.setState({ anchorEl: null });
-  };
+  // handleClose = () => {
+  //   this.setState({ projectMenuAnchor: null });
+  //   // dispatch({ type: CLOSE_MENU });
+  // };
   render() {
-    const { classes } = this.props;
-    const { anchorEl } = this.state;
+    const { classes, projectMenuAnchor } = this.props;
+    // const { projectMenuAnchor } = this.props;
 
     return (
       <div className={classes.root}>
@@ -53,18 +82,18 @@ class NavBar extends React.Component {
             </Button>
             <div>
               <Button
-                aria-owns={anchorEl ? "menu-appbar" : undefined}
+                aria-owns={projectMenuAnchor ? "menu-appbar" : undefined}
                 aria-haspopup="true"
-                onClick={this.handleMenu}
+                onClick={this.handlers.handleMenu}
                 color="inherit"
               >
                 Projects
               </Button>
               <Menu
                 id="menu-appbar"
-                anchorEl={anchorEl}
-                open={Boolean(anchorEl)}
-                onClose={this.handleClose}
+                anchorEl={projectMenuAnchor}
+                open={Boolean(projectMenuAnchor)}
+                onClose={this.handlers.handleClose}
               >
                 <MenuItem
                   component={Link}
@@ -89,7 +118,12 @@ class NavBar extends React.Component {
   }
 }
 NavBar.propTypes = {
-  classes: PropTypes.object.isRequired
+  classes: PropTypes.object.isRequired,
+  projectMenuAnchor: PropTypes.object
 };
 
-export default withStyles(styles)(NavBar);
+const mapStateToProps = state => ({
+  projectMenuAnchor: state.navbarReducer.projectMenuAnchor
+});
+
+export default connect(mapStateToProps)(withStyles(styles)(NavBar));
