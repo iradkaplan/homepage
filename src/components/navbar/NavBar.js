@@ -97,6 +97,13 @@ class NavBar extends React.Component {
               >
                 <MenuItem
                   component={Link}
+                  to="/projects/bikelanes/"
+                  onClick={this.handlers.handleClose}
+                >
+                  SF Protected Bike Lanes
+                </MenuItem>
+                <MenuItem
+                  component={Link}
                   to="/projects/sf-rcv/"
                   onClick={this.handlers.handleClose}
                 >
