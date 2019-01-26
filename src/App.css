@@ -1,5 +1,5 @@
 .App {
-  text-align: center;
+  /* text-align: center; */ /* this seems to mess up mapbox*/
 }
 
 .App-header {
@@ -16,4 +16,3 @@
 .App-link {
   color: #61dafb;
 }
-

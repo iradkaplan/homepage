@@ -8,6 +8,7 @@
   justify-content: center;
   font-size: calc(10pt + 2vmin);
   color: white;
+  text-align: center;
 }
 .navbar-shim {
   background-color: #2292bf;
@@ -21,7 +22,7 @@
 }*/
 
 @media (max-width: 599px) {
-  .App-body{
+  .App-body {
     min-height: calc(100vh - 56px);
   }
   .navbar-shim {
@@ -34,7 +35,7 @@
 }
 
 .body-content {
-  padding: 2vmin 4.5vmin 0 4.5vmin ;
+  padding: 2vmin 4.5vmin 0 4.5vmin;
 }
 
 .body-text {

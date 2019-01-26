@@ -5,13 +5,13 @@
 }
 
 @media (min-width: 960px) {
-	.Main-photo {
-	  height: 60vh;
-	}
+  .Main-photo {
+    height: 60vh;
+  }
 }
 
 .subheader {
-	margin-top: 0;
-	margin-bottom: 0;
-	font-size: calc(8pt + 1.4vmin);
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: calc(8pt + 1.4vmin);
 }
