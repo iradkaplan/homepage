@@ -1,8 +1,10 @@
 import React, { Component } from "react";
 import Grid from "@material-ui/core/Grid";
-import DeckGL, { LineLayer } from "deck.gl";
+import DeckGL, { GeoJsonLayer } from "deck.gl";
 import { StaticMap } from "react-map-gl";
+import "mapbox-gl/dist/mapbox-gl.css";
 import "./BikeLanes.css";
+import testdata from "./testdata3";
 
 const MAPBOX_ACCESS_TOKEN = process.env["REACT_APP_MAPBOX_TOKEN"];
 
@@ -16,19 +18,26 @@ const initialViewState = {
 };
 
 // Data to be used by the LineLayer
-const data = [
-  {
-    sourcePosition: [-122.41669, 37.7853],
-    targetPosition: [-122.41669, 37.781]
-  }
-];
+// const data = [
+//   {
+//     sourcePosition: [-122.41669, 37.7853],
+//     targetPosition: [-122.41669, 37.781]
+//   }
+// ];
 
 class BikeLanes extends Component {
   render() {
-    const layers = [new LineLayer({ id: "line-layer", data })];
+    const layers = [
+      new GeoJsonLayer({
+        id: "test-layer",
+        data: testdata,
+        lineWidthScale: 20,
+        lineWidthMinPixels: 2
+      })
+    ];
+    console.log(testdata.features);
     return (
       <>
-        {console.log(MAPBOX_ACCESS_TOKEN)}
         <Grid item xs={12} className="navbar-shim" />
         <DeckGL
           initialViewState={initialViewState}
