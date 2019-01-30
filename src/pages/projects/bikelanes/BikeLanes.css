@@ -1,6 +1,5 @@
 @import "../../BodyStyles.css";
 
-.Resume-image {
-  height: 80vmin;
-  min-height: 400px;
+mapboxgl-map {
+  left: 90;
 }
