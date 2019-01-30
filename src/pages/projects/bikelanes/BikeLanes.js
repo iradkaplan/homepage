@@ -4,7 +4,7 @@ import DeckGL, { GeoJsonLayer } from "deck.gl";
 import { StaticMap } from "react-map-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
 import "./BikeLanes.css";
-import testdata from "./testdata3";
+import data from "./greenLaneData";
 
 const MAPBOX_ACCESS_TOKEN = process.env["REACT_APP_MAPBOX_TOKEN"];
 
@@ -17,25 +17,17 @@ const initialViewState = {
   bearing: 0
 };
 
-// Data to be used by the LineLayer
-// const data = [
-//   {
-//     sourcePosition: [-122.41669, 37.7853],
-//     targetPosition: [-122.41669, 37.781]
-//   }
-// ];
-
 class BikeLanes extends Component {
   render() {
     const layers = [
       new GeoJsonLayer({
-        id: "test-layer",
-        data: testdata,
+        id: "lanes-layer",
+        data: data,
         lineWidthScale: 20,
-        lineWidthMinPixels: 2
+        lineWidthMinPixels: 2,
+        getLineColor: [0, 200, 0, 200]
       })
     ];
-    console.log(testdata.features);
     return (
       <>
         <Grid item xs={12} className="navbar-shim" />
