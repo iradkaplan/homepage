@@ -8,7 +8,7 @@ import Resume from "./pages/resume/Resume";
 import Homepage from "./pages/projects/homepage/Homepage";
 import SankeyRCV from "./pages/projects/sankeyrcv/SankeyRCV";
 import BikeLanes from "./pages/projects/bikelanes/BikeLanes";
-import ReduxDevTools from "./components/ReduxDevTools";
+// import ReduxDevTools from "./components/ReduxDevTools";
 
 class App extends Component {
   render() {
@@ -22,7 +22,7 @@ class App extends Component {
             <Route path="/projects/homepage/" component={Homepage} />
             <Route path="/projects/sf-rcv/" component={SankeyRCV} />
             <Route path="/projects/bikelanes/" component={BikeLanes} />
-            <ReduxDevTools />
+            {/* <ReduxDevTools /> */}
           </div>
         </Router>
       </Provider>
