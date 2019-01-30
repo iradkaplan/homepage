@@ -7,12 +7,12 @@ import "./BikeLanes.css";
 import data from "./greenLaneData";
 
 const MAPBOX_ACCESS_TOKEN = process.env["REACT_APP_MAPBOX_TOKEN"];
-
+//37.7637729,-122.4410063,12.69z
 // Initial viewport settings
 const initialViewState = {
-  longitude: -122.41669,
-  latitude: 37.7853,
-  zoom: 13,
+  longitude: -122.4410063,
+  latitude: 37.7637729,
+  zoom: 11.5,
   pitch: 0,
   bearing: 0
 };
@@ -23,9 +23,10 @@ class BikeLanes extends Component {
       new GeoJsonLayer({
         id: "lanes-layer",
         data: data,
-        lineWidthScale: 20,
+        lineWidthScale: 5,
         lineWidthMinPixels: 2,
-        getLineColor: [0, 200, 0, 200]
+        getLineColor: [0, 200, 0, 200],
+        lineJointRounded: true
       })
     ];
     return (
