@@ -4,7 +4,7 @@ import DeckGL, { GeoJsonLayer } from "deck.gl";
 import { StaticMap } from "react-map-gl";
 import Typography from "@material-ui/core/Typography";
 import "mapbox-gl/dist/mapbox-gl.css";
-import "./BikeLanes.css";
+import "./GreenLanes.css";
 import data from "./greenLaneData";
 
 const MAPBOX_ACCESS_TOKEN = process.env["REACT_APP_MAPBOX_TOKEN"];
@@ -40,6 +40,14 @@ class BikeLanes extends Component {
           alignItems="center"
         >
           <Grid item xs={12} className="body-content">
+            <Typography
+              variant="h3"
+              style={{ color: "white", textAlign: "center" }}
+            >
+              San Francisco's Protected Green Lanes
+            </Typography>
+          </Grid>
+          <Grid item xs={12} className="body-content">
             <div
               style={{
                 position: "relative",
@@ -56,8 +64,15 @@ class BikeLanes extends Component {
               </DeckGL>
             </div>
           </Grid>
-          <Grid item xs={12} className="App-body body-content">
-            <p className="body-text">
+          <Grid
+            item
+            xs={12}
+            md={10}
+            lg={8}
+            xl={6}
+            className="App-body body-content"
+          >
+            <p className="body-text note">
               A quick note on terminology: the pieces of infrastructure I’m
               discussing here are most commonly known as a “protected bike
               lanes” or sometimes as “cycle tracks.” In this article, I instead
@@ -103,7 +118,7 @@ class BikeLanes extends Component {
               to your meetup. Maybe there’s a convenient Muni route, but if not
               you’ll take a car.
             </p>
-            <Typography variant="h3" style={{ color: "white" }}>
+            <Typography variant="h4" style={{ color: "white" }}>
               It doesn’t have to be this way.
             </Typography>
             <p className="body-text">
@@ -133,7 +148,7 @@ class BikeLanes extends Component {
               existing protected green lanes addressed. San Francisco lacks a
               vision for a network of protected green lanes spanning the city.
             </p>
-            <Typography variant="h3" style={{ color: "white" }}>
+            <Typography variant="h4" style={{ color: "white" }}>
               Why are protected lanes so important?
             </Typography>
             <p className="body-text">
@@ -151,7 +166,7 @@ class BikeLanes extends Component {
               e-bikes and other electric-powered micromobility makes our city’s
               famous hills less of a barrier than ever before.
             </p>
-            <Typography variant="h3" style={{ color: "white" }}>
+            <Typography variant="h4" style={{ color: "white" }}>
               Why do we want people to use micromobility?
             </Typography>
             <p className="body-text">
@@ -167,7 +182,7 @@ class BikeLanes extends Component {
               In addition to the benefits to society, self-powered
               transportation is good for your health and fun.
             </p>
-            <Typography variant="h3" style={{ color: "white" }}>
+            <Typography variant="h4" style={{ color: "white" }}>
               Data Methodology
             </Typography>
             <p className="body-text">
@@ -223,13 +238,13 @@ class BikeLanes extends Component {
               been there, and unable to find records of the bike experience
               there, I didn’t feel comfortable including it on my map.
             </p>
-            <Typography variant="h3" style={{ color: "white" }}>
+            <Typography variant="h4" style={{ color: "white" }}>
               Technical Details
             </Typography>
             <p className="body-text">
               The map is in Deck.gl with react-map-gl. I exported the data layer
               from QGIS to GeoJSON, which is then read into the map. Source code
-              is here .(include link)
+              is here.(include link)
             </p>{" "}
           </Grid>
         </Grid>

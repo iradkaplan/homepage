@@ -1,0 +1,6 @@
+@import "../../BodyStyles.css";
+
+.note {
+  font-size: calc(8pt + 0.5vmin);
+  font-style: italic;
+}

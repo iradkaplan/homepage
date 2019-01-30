@@ -7,6 +7,7 @@ import Home from "./pages/home/Home";
 import Resume from "./pages/resume/Resume";
 import Homepage from "./pages/projects/homepage/Homepage";
 import SankeyRCV from "./pages/projects/sankeyrcv/SankeyRCV";
+import GreenLanes from "./pages/projects/greenlanes/GreenLanes";
 
 class App extends Component {
   render() {
@@ -19,6 +20,7 @@ class App extends Component {
             <Route path="/resume/" component={Resume} />
             <Route path="/projects/homepage/" component={Homepage} />
             <Route path="/projects/sf-rcv/" component={SankeyRCV} />
+            <Route path="/projects/greenlanes/" component={GreenLanes} />
           </div>
         </Router>
       </Provider>

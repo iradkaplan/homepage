@@ -7,7 +7,7 @@ import Home from "./pages/home/Home";
 import Resume from "./pages/resume/Resume";
 import Homepage from "./pages/projects/homepage/Homepage";
 import SankeyRCV from "./pages/projects/sankeyrcv/SankeyRCV";
-import BikeLanes from "./pages/projects/bikelanes/BikeLanes";
+import GreenLanes from "./pages/projects/greenlanes/GreenLanes";
 // import ReduxDevTools from "./components/ReduxDevTools";
 
 class App extends Component {
@@ -21,7 +21,7 @@ class App extends Component {
             <Route path="/resume/" component={Resume} />
             <Route path="/projects/homepage/" component={Homepage} />
             <Route path="/projects/sf-rcv/" component={SankeyRCV} />
-            <Route path="/projects/bikelanes/" component={BikeLanes} />
+            <Route path="/projects/greenlanes/" component={GreenLanes} />
             {/* <ReduxDevTools /> */}
           </div>
         </Router>
