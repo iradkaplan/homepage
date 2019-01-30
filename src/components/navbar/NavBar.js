@@ -97,10 +97,10 @@ class NavBar extends React.Component {
               >
                 <MenuItem
                   component={Link}
-                  to="/projects/bikelanes/"
+                  to="/projects/greenlanes/"
                   onClick={this.handlers.handleClose}
                 >
-                  SF Protected Bike Lanes
+                  SF Protected Green Lanes
                 </MenuItem>
                 <MenuItem
                   component={Link}
