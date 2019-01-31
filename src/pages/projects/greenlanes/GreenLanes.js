@@ -3,9 +3,16 @@ import Grid from "@material-ui/core/Grid";
 import DeckGL, { GeoJsonLayer } from "deck.gl";
 import { StaticMap } from "react-map-gl";
 import Typography from "@material-ui/core/Typography";
+import Paper from "@material-ui/core/Paper";
+import { Link } from "react-router-dom";
 import "mapbox-gl/dist/mapbox-gl.css";
 import "./GreenLanes.css";
 import data from "./greenLaneData";
+import SFBikeMap from "./SFBikeMap.png";
+import GoogleBikeMap from "./GoogleBikeMap.png";
+import LondonBikePlan from "./LondonBikePlan.png";
+import SevilleBikeMap from "./SevilleBikeMap.png";
+import SFBikePlan from "./SFBikePlan.png";
 
 const MAPBOX_ACCESS_TOKEN = process.env["REACT_APP_MAPBOX_TOKEN"];
 //37.7637729,-122.4410063,12.69z
@@ -44,7 +51,7 @@ class BikeLanes extends Component {
               variant="h3"
               style={{ color: "white", textAlign: "center" }}
             >
-              San Francisco's Protected Green Lanes
+              Mapping San Francisco's Protected Green Lanes
             </Typography>
           </Grid>
           <Grid item xs={12} className="body-content">
@@ -95,7 +102,53 @@ class BikeLanes extends Component {
               great places to bike, scoot, and skateboard.
             </p>
             <Typography variant="h3" style={{ color: "white" }} />
-            <p className="body-text">(Put pictures here)</p>
+            <Grid
+              container
+              direction="row"
+              justify="space-evenly"
+              alignItems="center"
+            >
+              <Grid item xs={12} md={6} className="body-content">
+                <Paper className="image-paper">
+                  <img
+                    src={SFBikeMap}
+                    className="screenshot"
+                    alt="San Francisco's official bike map."
+                  />
+                  <br />
+                  <Typography variant="caption">
+                    San Francisco's official bike map.{" "}
+                    <Link
+                      to="//www.sfmta.com/maps/san-francisco-bike-network-map"
+                      target="_blank"
+                      className="captionLink"
+                    >
+                      source
+                    </Link>
+                  </Typography>
+                </Paper>
+              </Grid>
+              <Grid item xs={12} md={6} className="body-content">
+                <Paper className="image-paper">
+                  <img
+                    src={GoogleBikeMap}
+                    className="screenshot"
+                    alt="Google Maps Bike Map"
+                  />
+                  <br />
+                  <Typography variant="caption">
+                    Google Maps bike map.{" "}
+                    <Link
+                      to="//www.google.com/maps/@37.7648823,-122.4363515,12z/data=!5m1!1e3"
+                      target="_blank"
+                      className="captionLink"
+                    >
+                      source
+                    </Link>
+                  </Typography>
+                </Paper>
+              </Grid>
+            </Grid>
             <p className="body-text">
               But maybe the thought of being mixed in with car traffic sounds
               intimidating, stressful, or just unpleasant. Maybe you’ve had
@@ -105,18 +158,18 @@ class BikeLanes extends Component {
               you want to avoid all that?
             </p>
             <p className="body-text">
-              As the map above shows, there aren’t any protected green lanes
-              connecting your origin and destination. Even if your route
-              contains green lanes, it’s unlikely that they can get you all the
-              way there. They disappear at intersections, or even a bit before
-              them. They’re unprotected for half a block because someone with
-              political connections called in a favor to avoid losing a parking
-              space for their car. The soft-hit posts meant to protect you show
-              the scars of being run over by cars and trucks multiple times, a
-              reminder of the limited protection they offer. The protected lanes
-              are too short, too sparse, too disjointed. You decide not to bike
-              to your meetup. Maybe there’s a convenient Muni route, but if not
-              you’ll take a car.
+              As the map at the top of this page shows, there aren’t any
+              protected green lanes connecting your origin and destination. Even
+              if your route contains green lanes, it’s unlikely that they can
+              get you all the way there. They disappear at intersections, or
+              even a bit before them. They’re unprotected for half a block
+              because someone with political connections called in a favor to
+              avoid losing a parking space for their car. The soft-hit posts
+              meant to protect you show the scars of being run over by cars and
+              trucks multiple times, a reminder of the limited protection they
+              offer. The protected lanes are too short, too sparse, too
+              disjointed. You decide not to bike to your meetup. Maybe there’s a
+              convenient Muni route, but if not you’ll take a car.
             </p>
             <Typography variant="h4" style={{ color: "white" }}>
               It doesn’t have to be this way.
@@ -124,19 +177,85 @@ class BikeLanes extends Component {
             <p className="body-text">
               Other cities around the world have seen dramatic increases in
               bicycling after investing in the creation of a cohesive protected
-              green lane network. London has been building a network of “Cycle
-              Superhighways” spanning the city that, though imperfect, has
-              dramatically increased cycling, in many cases moving more people
+              green lane network. London has been building a network of “
+              <Link
+                to="//tfl.gov.uk/modes/cycling/routes-and-maps/cycle-superhighways"
+                target="_blank"
+                className="linkWithUnderline"
+              >
+                Cycle Superhighways
+              </Link>
+              ” spanning the city that,{" "}
+              <Link
+                to="//www.citymetric.com/transport/i-cycled-length-all-london-s-cycling-superhighways-here-s-what-i-learnt-2910"
+                target="_blank"
+                className="linkWithUnderline"
+              >
+                though imperfect
+              </Link>
+              , has dramatically increased cycling, in many cases moving{" "}
+              <Link
+                to="//ecf.com/news-and-events/news/evolution-cycle-superhighways-london"
+                target="_blank"
+                className="linkWithUnderline"
+              >
+                more people
+              </Link>{" "}
               than would be possible with car-oriented infrastructure.
             </p>
-            <p className="body-text">(Picture of Cycle Superhighways)</p>
+            <Grid item xs={12} md={6} className="body-content">
+              <Paper className="image-paper">
+                <img
+                  src={LondonBikePlan}
+                  className="screenshot"
+                  alt="London's Cycle Superhighways."
+                />
+                <br />
+                <Typography variant="caption">
+                  London's Cycle Superhighways.{" "}
+                  <Link
+                    to="//content.tfl.gov.uk/strategic-cycling-analysis.pdf"
+                    target="_blank"
+                    className="captionLink"
+                  >
+                    source [PDF]
+                  </Link>
+                </Typography>
+              </Paper>
+            </Grid>
             <p className="body-text">
               Seville built a comprehensive protected green lane network from
-              practically nothing between 2006 and 2010, and saw bicycling trips
-              rise from 3 million per year to 17 million per year over the same
-              time period.
+              practically nothing between 2006 and 2010, and saw{" "}
+              <Link
+                to="//peopleforbikes.org/blog/landmark-study-from-seville-shows-immediate-results-from-a-bike-network/"
+                target="_blank"
+                className="linkWithUnderline"
+              >
+                bicycling trips rise
+              </Link>{" "}
+              from 3 million per year to 17 million per year over the same time
+              period.
             </p>
-            <p className="body-text">(Picture of Seville Bike Lane Progress)</p>
+            <Grid item xs={12} md={6} className="body-content">
+              <Paper className="image-paper">
+                <img
+                  src={SevilleBikeMap}
+                  className="screenshot"
+                  alt="Evolution of Seville's protected green lane network."
+                />
+                <br />
+                <Typography variant="caption">
+                  Evolution of Seville's protected green lane network.{" "}
+                  <Link
+                    to="//www.pensandoelterritorio.com/sevilla-ciudad-ciclista/"
+                    target="_blank"
+                    className="captionLink"
+                  >
+                    via
+                  </Link>
+                </Typography>
+              </Paper>
+            </Grid>
             <p className="body-text">
               San Francisco, to its credit, has been building its network of
               protected green lanes over the last several years, and there are
@@ -148,23 +267,60 @@ class BikeLanes extends Component {
               existing protected green lanes addressed. San Francisco lacks a
               vision for a network of protected green lanes spanning the city.
             </p>
+            <Grid item xs={12} md={6} className="body-content">
+              <Paper className="image-paper">
+                <img
+                  src={SFBikePlan}
+                  className="screenshot"
+                  alt="San Francisco's planned bike routes as of 2017."
+                />
+                <br />
+                <Typography variant="caption">
+                  San Francisco's planned bike routes as of 2017.{" "}
+                  <Link
+                    to="//www.sfmta.com/sites/default/files/reports-and-documents/2017/09/booklet_final_web_version.pdf"
+                    target="_blank"
+                    className="captionLink"
+                  >
+                    source [PDF]
+                  </Link>
+                </Typography>
+              </Paper>
+            </Grid>
+            <p />
             <Typography variant="h4" style={{ color: "white" }}>
               Why are protected lanes so important?
             </Typography>
             <p className="body-text">
-              About ten percent of people are considered either “Strong and
-              Fearless” or “Enthused and Confident” bicyclists. Thirty to
-              thirty-five percent are considered “No Way, No How,” and the
-              remaining 55-60% of the population are “Interested but Concerned.”
-              These are people who might like to bike but are worried about
-              safety. This is a huge population of potential bicyclists! If the
-              estimates for the US population are true for San Francisco, that’s
-              about half a million San Franciscans who might start taking
-              micromobility to get around town if we made it safe and
-              convenient. But our actual bicycling rate has been stuck between
-              3.5% and 4.5% for the last decade. Additionally, the rise of
-              e-bikes and other electric-powered micromobility makes our city’s
-              famous hills less of a barrier than ever before.
+              About ten percent of people are{" "}
+              <Link
+                to="//www.citylab.com/transportation/2016/01/the-4-types-of-cyclists-youll-meet-on-us-city-streets/422787/"
+                target="_blank"
+                className="linkWithUnderline"
+              >
+                considered
+              </Link>{" "}
+              either “Strong and Fearless” or “Enthused and Confident”
+              bicyclists. Thirty to thirty-five percent are considered “No Way,
+              No How,” and the remaining 55-60% of the population are
+              “Interested but Concerned.” These are people who might like to
+              bike but are worried about safety. This is a huge population of
+              potential bicyclists! If the estimates for the US population are
+              true for San Francisco, that’s about half a million San
+              Franciscans who might start taking micromobility to get around
+              town if we made it safe and convenient. But our actual bicycling
+              rate has been stuck between 3.5% and 4.5% for the last decade, and
+              is{" "}
+              <Link
+                to="//www.sfmta.com/reports/san-francisco-mobility-trends-report-2018"
+                target="_blank"
+                className="linkWithUnderline"
+              >
+                down since 2015.
+              </Link>{" "}
+              Additionally, the rise of e-bikes and other electric-powered
+              micromobility makes our city’s famous hills less of a barrier than
+              ever before.
             </p>
             <Typography variant="h4" style={{ color: "white" }}>
               Why do we want people to use micromobility?
@@ -174,13 +330,16 @@ class BikeLanes extends Component {
               around town if we want to avoid the worst catastrophic effects of
               climate change. And even electric cars cause traffic congestion
               and waste a lot of energy--it’s a lot more energy efficient not to
-              move a two-ton appliance around. Besides, do you know how many
-              straws you would have to use to match the amount of plastic in a
-              Tesla? Me neither, but I bet it’s a lot.
-            </p>
-            <p className="body-text">
-              In addition to the benefits to society, self-powered
-              transportation is good for your health and fun.
+              move a two-ton appliance around. Besides, do you know how many{" "}
+              <Link
+                to="//www.sfchronicle.com/politics/article/No-more-slurping-through-plastic-straws-in-San-13102063.php"
+                target="_blank"
+                className="linkWithUnderline"
+              >
+                straws
+              </Link>{" "}
+              you would have to use to match the amount of plastic in a Tesla?
+              Me neither, but I bet it’s a lot.
             </p>
             <Typography variant="h4" style={{ color: "white" }}>
               Data Methodology
@@ -188,8 +347,14 @@ class BikeLanes extends Component {
             <p className="body-text">
               This map is meant to be an accurate representation of San
               Francisco’s protected green lanes, and I intend to update it
-              periodically to keep it that way. If something seems amiss, please
-              reach out!
+              periodically to keep it that way. If something seems amiss, please{" "}
+              <Link
+                to="//twitter.com/irapolis"
+                target="_blank"
+                className="linkWithUnderline"
+              >
+                reach out!
+              </Link>
             </p>
             <p className="body-text">
               I drew all of the protected green lanes on the map myself in QGIS.
@@ -243,8 +408,14 @@ class BikeLanes extends Component {
             </Typography>
             <p className="body-text">
               The map is in Deck.gl with react-map-gl. I exported the data layer
-              from QGIS to GeoJSON, which is then read into the map. Source code
-              is here.(include link)
+              from QGIS to GeoJSON, which is then read into the map.{" "}
+              <Link
+                to="//github.com/iradkaplan/homepage"
+                target="_blank"
+                className="linkWithUnderline"
+              >
+                Source code is here.
+              </Link>
             </p>{" "}
           </Grid>
         </Grid>

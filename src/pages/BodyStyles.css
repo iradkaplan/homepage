@@ -56,3 +56,7 @@
 .linkWithUnderline {
   color: white;
 }
+.captionLink {
+  text-decoration: none;
+  font-style: italic;
+}
