@@ -203,7 +203,7 @@ class BikeLanes extends Component {
               </Link>{" "}
               than would be possible with car-oriented infrastructure.
             </p>
-            <Grid item xs={12} md={6} className="body-content">
+            <Grid item xs={12} md={10} lg={8} xl={6} className="body-content">
               <Paper className="image-paper">
                 <img
                   src={LondonBikePlan}
@@ -236,7 +236,7 @@ class BikeLanes extends Component {
               from 3 million per year to 17 million per year over the same time
               period.
             </p>
-            <Grid item xs={12} md={6} className="body-content">
+            <Grid item xs={12} md={10} lg={8} xl={6} className="body-content">
               <Paper className="image-paper">
                 <img
                   src={SevilleBikeMap}
@@ -267,7 +267,7 @@ class BikeLanes extends Component {
               existing protected green lanes addressed. San Francisco lacks a
               vision for a network of protected green lanes spanning the city.
             </p>
-            <Grid item xs={12} md={6} className="body-content">
+            <Grid item xs={12} md={10} lg={8} xl={6} className="body-content">
               <Paper className="image-paper">
                 <img
                   src={SFBikePlan}
