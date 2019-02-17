@@ -367,14 +367,18 @@ class BikeLanes extends Component {
               to Google Maps, the bike network map in the Ford GoBike app, and
               the SFMTA bike network map while drawing them. What counts as a
               protected green lane? For me to include it in my map, it needs to
-              be:{" "}
-              <ul>
+              be:
+            </p>
+            <div className="list">
+              <ul className="body-text">
                 <li>Paved </li>
                 <li>
                   Separated from cars by a either a physical barrier or a very
                   substantial painted buffer
                 </li>
               </ul>
+            </div>
+            <p className="body-text">
               Mixing with pedestrians is fine as long as that’s an intended use
               of the space. Some of the very short lines are things like bus
               boarding islands, where the protected lane goes between the bus
@@ -384,8 +388,10 @@ class BikeLanes extends Component {
             <p className="body-text">
               I generally didn’t draw paths in parks that aren’t part of a bike
               route external to the park. I excluded infrastructure that leads
-              to conflicts with cars:{" "}
-              <ul>
+              to conflicts with cars:
+            </p>
+            <div className="list">
+              <ul className="body-text">
                 <li>Unprotected lanes</li>
                 <li>Mixing zones</li>
                 <li>Buffered bike lanes with no barrier to keep cars out</li>
@@ -393,7 +399,7 @@ class BikeLanes extends Component {
                   Unprotected intersections on otherwise protected bike lanes
                 </li>
               </ul>
-            </p>
+            </div>
             <p className="body-text">
               I excluded most of the length of the paint-protected green lanes
               on JFK because cars park illegally in the buffer, which defeats

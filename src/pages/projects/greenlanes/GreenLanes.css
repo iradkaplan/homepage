@@ -4,3 +4,8 @@
   font-size: calc(8pt + 0.5vmin);
   font-style: italic;
 }
+
+.list {
+  width: 100%;
+  justify-content: flex-start;
+}
