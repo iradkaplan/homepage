@@ -7,7 +7,11 @@ import NavBar from "./components/navbar/NavBar";
 import { Store } from "redux";
 import { ApplicationState } from "./store";
 import { LoadingComponent } from "./components/LoadingComponent";
+import createTheme from "./theme";
+import { MuiThemeProvider } from "@material-ui/core";
 // import ReduxDevTools from "./components/ReduxDevTools";
+
+const theme = createTheme();
 
 const AsyncHome = Loadable({
   loader: () => import("./pages/home/Home"),
@@ -35,15 +39,17 @@ class App extends Component<{ store: Store<ApplicationState> }> {
     return (
       <Provider store={this.props.store}>
         <Router>
-          <div className="App">
-            <NavBar />
-            <Route path="/" exact component={AsyncHome} />
-            <Route path="/resume/" component={AsyncResume} />
-            <Route path="/projects/homepage/" component={AsyncHomepage} />
-            <Route path="/projects/sf-rcv/" component={AsyncRCV} />
-            <Route path="/projects/greenlanes/" component={AsyncGreenLanes} />
-            {/* <ReduxDevTools /> */}
-          </div>
+          <MuiThemeProvider theme={theme}>
+            <div className="App">
+              <NavBar />
+              <Route path="/" exact component={AsyncHome} />
+              <Route path="/resume/" component={AsyncResume} />
+              <Route path="/projects/homepage/" component={AsyncHomepage} />
+              <Route path="/projects/sf-rcv/" component={AsyncRCV} />
+              <Route path="/projects/greenlanes/" component={AsyncGreenLanes} />
+              {/* <ReduxDevTools /> */}
+            </div>
+          </MuiThemeProvider>
         </Router>
       </Provider>
     );

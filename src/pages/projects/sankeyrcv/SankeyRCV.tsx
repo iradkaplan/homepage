@@ -23,7 +23,7 @@ class SankeyRCV extends Component {
               <Typography variant="h3" style={{ color: "white" }}>
                 Making sense of a complex election
               </Typography>
-              <p className="body-text">
+              <Typography variant="body1" component="p" paragraph>
                 San Francisco, where I live, has a complex and unusual voting
                 system. For most municipal offices, voters can rank their
                 favorite three candidates, a system known as Ranked-Choice
@@ -32,14 +32,14 @@ class SankeyRCV extends Component {
                 redistribute their votes to each voter's next-favorite
                 candidate. This process is repeated until one candidate earns
                 more than 50% of the vote.
-              </p>
-              <p className="body-text">
+              </Typography>
+              <Typography variant="body1" component="p" paragraph>
                 Additionally, vote-by-mail is available to everyone and is very
                 popular. Mailed ballots just need to be postmarked by election
                 day or dropped at a collection station (available at any polling
                 place). Consequently, ballots are still arriving and being
                 counted for days or weeks after election day.
-              </p>
+              </Typography>
             </Grid>
             <Grid item xs={12} md={6} className="body-content">
               <Paper className="image-paper">
@@ -55,7 +55,7 @@ class SankeyRCV extends Component {
               </Paper>
             </Grid>
             <Grid item xs={12} md={6} lg={4} className="body-content">
-              <p className="body-text">
+              <Typography variant="body1" component="p" paragraph>
                 In the June 5, 2018, Mayoral election, two candidates, Jane Kim
                 and Mark Leno, followed a strategy in which each one asked their
                 first-place voters to vote for the other in second place. After
@@ -64,7 +64,7 @@ class SankeyRCV extends Component {
                 votes from Jane Kim voters. However, the closeness of the vote
                 meant that the final result would depend on the ballots left to
                 be counted over the ensuing days.
-              </p>
+              </Typography>
             </Grid>
             <Grid
               item
@@ -93,7 +93,7 @@ class SankeyRCV extends Component {
               className="body-content"
               style={{ marginBottom: "2vh" }}
             >
-              <p className="body-text">
+              <Typography variant="body1" component="p" paragraph>
                 The city Department of Elections published new vote counts on
                 its{" "}
                 <Link
@@ -124,8 +124,8 @@ class SankeyRCV extends Component {
                 of these results, then shared them on social media. Ultimately,
                 the late ballots broke for London Breed, and she overtook Mark
                 Leno to win the race.
-              </p>
-              <p className="body-text">
+              </Typography>
+              <Typography variant="body1" component="p" paragraph>
                 You can find my source code on GitHub{" "}
                 <Link
                   to="//github.com/iradkaplan/sf-rcv-201806"
@@ -152,7 +152,7 @@ class SankeyRCV extends Component {
                   here
                 </Link>
                 . (May not work well on mobile.)
-              </p>
+              </Typography>
             </Grid>
           </Grid>
         </div>

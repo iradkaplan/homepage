@@ -84,7 +84,7 @@ class BikeLanes extends Component {
             xl={6}
             className="App-body body-content"
           >
-            <p className="body-text note">
+            <Typography variant="body2" component="p" paragraph>
               A quick note on terminology: the pieces of infrastructure I’m
               discussing here are most commonly known as a “protected bike
               lanes” or sometimes as “cycle tracks.” In this article, I instead
@@ -95,17 +95,17 @@ class BikeLanes extends Component {
               color of the best examples and their environmental friendliness.
               In this article, I refer to biking several times, but I also mean
               these other forms of micromobility.
-            </p>
+            </Typography>
             <Typography variant="h3" style={{ color: "white" }}>
               Why is it so hard to get around San Francisco?
             </Typography>
-            <p className="body-text">
+            <Typography variant="body1" component="p" paragraph>
               Suppose you want to get from your home in the Marina to a meetup
               in the Mission. What route should you take? If you look at the
               SFMTA’s official bike map or Google Maps, you’ll see lots of
               options. The city is covered with colorful lines showing all the
               great places to bike, scoot, and skateboard.
-            </p>
+            </Typography>
             <Typography variant="h3" style={{ color: "white" }} />
             <Grid
               container
@@ -154,15 +154,15 @@ class BikeLanes extends Component {
                 </Paper>
               </Grid>
             </Grid>
-            <p className="body-text">
+            <Typography variant="body1" component="p" paragraph>
               But maybe the thought of being mixed in with car traffic sounds
               intimidating, stressful, or just unpleasant. Maybe you’ve had
               scary encounters with drivers before, or have friends or loved
               ones who have, or you’ve heard on the news about people being
               killed or injured in traffic violence. What are your options if
               you want to avoid all that?
-            </p>
-            <p className="body-text">
+            </Typography>
+            <Typography variant="body1" component="p" paragraph>
               As the map at the top of this page shows, there aren’t any
               protected green lanes connecting your origin and destination. Even
               if your route contains green lanes, it’s unlikely that they can
@@ -175,11 +175,11 @@ class BikeLanes extends Component {
               offer. The protected lanes are too short, too sparse, too
               disjointed. You decide not to bike to your meetup. Maybe there’s a
               convenient Muni route, but if not you’ll take a car.
-            </p>
+            </Typography>
             <Typography variant="h4" style={{ color: "white" }}>
               It doesn’t have to be this way.
             </Typography>
-            <p className="body-text">
+            <Typography variant="body1" component="p" paragraph>
               Other cities around the world have seen dramatic increases in
               bicycling after investing in the creation of a cohesive protected
               green lane network. London has been building a network of “
@@ -207,7 +207,7 @@ class BikeLanes extends Component {
                 more people
               </Link>{" "}
               than would be possible with car-oriented infrastructure.
-            </p>
+            </Typography>
             <Grid item xs={12} md={10} lg={8} xl={6} className="body-content">
               <Paper className="image-paper">
                 <img
@@ -228,7 +228,7 @@ class BikeLanes extends Component {
                 </Typography>
               </Paper>
             </Grid>
-            <p className="body-text">
+            <Typography variant="body1" component="p" paragraph>
               Seville built a comprehensive protected green lane network from
               practically nothing between 2006 and 2010, and saw{" "}
               <Link
@@ -240,7 +240,7 @@ class BikeLanes extends Component {
               </Link>{" "}
               from 3 million per year to 17 million per year over the same time
               period.
-            </p>
+            </Typography>
             <Grid item xs={12} md={10} lg={8} xl={6} className="body-content">
               <Paper className="image-paper">
                 <img
@@ -261,7 +261,7 @@ class BikeLanes extends Component {
                 </Typography>
               </Paper>
             </Grid>
-            <p className="body-text">
+            <Typography variant="body1" component="p" paragraph>
               San Francisco, to its credit, has been building its network of
               protected green lanes over the last several years, and there are
               more in the works, including lanes now under construction on
@@ -271,7 +271,7 @@ class BikeLanes extends Component {
               protected green lane network, nor are the design shortcomings of
               existing protected green lanes addressed. San Francisco lacks a
               vision for a network of protected green lanes spanning the city.
-            </p>
+            </Typography>
             <Grid item xs={12} md={10} lg={8} xl={6} className="body-content">
               <Paper className="image-paper">
                 <img
@@ -296,7 +296,7 @@ class BikeLanes extends Component {
             <Typography variant="h4" style={{ color: "white" }}>
               Why are protected lanes so important?
             </Typography>
-            <p className="body-text">
+            <Typography variant="body1" component="p" paragraph>
               About ten percent of people are{" "}
               <Link
                 to="//www.citylab.com/transportation/2016/01/the-4-types-of-cyclists-youll-meet-on-us-city-streets/422787/"
@@ -326,11 +326,11 @@ class BikeLanes extends Component {
               Additionally, the rise of e-bikes and other electric-powered
               micromobility makes our city’s famous hills less of a barrier than
               ever before.
-            </p>
+            </Typography>
             <Typography variant="h4" style={{ color: "white" }}>
               Why do we want people to use micromobility?
             </Typography>
-            <p className="body-text">
+            <Typography variant="body1" component="p" paragraph>
               Our planet is melting. We can’t keep using fossil fuels to get
               around town if we want to avoid the worst catastrophic effects of
               climate change. And even electric cars cause traffic congestion
@@ -345,11 +345,11 @@ class BikeLanes extends Component {
               </Link>{" "}
               you would have to use to match the amount of plastic in a Tesla?
               Me neither, but I bet it’s a lot.
-            </p>
+            </Typography>
             <Typography variant="h4" style={{ color: "white" }}>
               Data Methodology
             </Typography>
-            <p className="body-text">
+            <Typography variant="body1" component="p" paragraph>
               This map is meant to be an accurate representation of San
               Francisco’s protected green lanes, and I intend to update it
               periodically to keep it that way. If something seems amiss, please{" "}
@@ -360,15 +360,15 @@ class BikeLanes extends Component {
               >
                 reach out!
               </Link>
-            </p>
-            <p className="body-text">
+            </Typography>
+            <Typography variant="body1" component="p" paragraph>
               I drew all of the protected green lanes on the map myself in QGIS.
               I’ve biked most of them and photographed many, but I also referred
               to Google Maps, the bike network map in the Ford GoBike app, and
               the SFMTA bike network map while drawing them. What counts as a
               protected green lane? For me to include it in my map, it needs to
               be:
-            </p>
+            </Typography>
             <div className="list">
               <ul className="body-text">
                 <li>Paved </li>
@@ -378,18 +378,18 @@ class BikeLanes extends Component {
                 </li>
               </ul>
             </div>
-            <p className="body-text">
+            <Typography variant="body1" component="p" paragraph>
               Mixing with pedestrians is fine as long as that’s an intended use
               of the space. Some of the very short lines are things like bus
               boarding islands, where the protected lane goes between the bus
               stop and the sidewalk, or spaces where the city added a few soft
               hit posts to otherwise unprotected lanes.
-            </p>
-            <p className="body-text">
+            </Typography>
+            <Typography variant="body1" component="p" paragraph>
               I generally didn’t draw paths in parks that aren’t part of a bike
               route external to the park. I excluded infrastructure that leads
               to conflicts with cars:
-            </p>
+            </Typography>
             <div className="list">
               <ul className="body-text">
                 <li>Unprotected lanes</li>
@@ -400,7 +400,7 @@ class BikeLanes extends Component {
                 </li>
               </ul>
             </div>
-            <p className="body-text">
+            <Typography variant="body1" component="p" paragraph>
               I excluded most of the length of the paint-protected green lanes
               on JFK because cars park illegally in the buffer, which defeats
               the purpose. I stopped the line for the Embarcadero shared trail
@@ -413,7 +413,7 @@ class BikeLanes extends Component {
               appears from Google Maps to be quite nice to bike on. Not having
               been there, and unable to find records of the bike experience
               there, I didn’t feel comfortable including it on my map.
-            </p>
+            </Typography>
             <Typography variant="h5" style={{ color: "white" }}>
               Revision History
             </Typography>
@@ -436,7 +436,7 @@ class BikeLanes extends Component {
             <Typography variant="h4" style={{ color: "white" }}>
               Technical Details
             </Typography>
-            <p className="body-text">
+            <Typography variant="body1" component="p" paragraph>
               The map is in Deck.gl with react-map-gl. I exported the data layer
               from QGIS to GeoJSON, which is then read into the map.{" "}
               <Link
@@ -446,7 +446,7 @@ class BikeLanes extends Component {
               >
                 Source code is here.
               </Link>
-            </p>{" "}
+            </Typography>{" "}
           </Grid>
         </Grid>
       </>
