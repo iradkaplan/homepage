@@ -1,12 +1,14 @@
-import { createStore, applyMiddleware, compose } from "redux";
+import { Store, createStore, applyMiddleware, compose } from "redux";
 // import thunk from "redux-thunk";
 import { createLogger } from "redux-logger";
 // import api from "../middleware/api";
-import rootReducer from "../reducers";
+import rootReducer, { ApplicationState } from "../reducers";
 import ReduxDevTools from "../components/ReduxDevTools";
 
-function configureStore(preloadedState?: any) {
-  const store = createStore(
+function configureStore(
+  preloadedState?: ApplicationState
+): Store<ApplicationState> {
+  const store: Store<ApplicationState> = createStore(
     rootReducer,
     preloadedState,
     compose(

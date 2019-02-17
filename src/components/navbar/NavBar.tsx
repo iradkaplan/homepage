@@ -11,6 +11,7 @@ import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { openMenu, closeMenu } from "../../actions";
 import { CSSProperties } from "jss/css";
+import { ApplicationState } from "../../reducers";
 
 const styles: Record<any, CSSProperties> = {
   root: {
@@ -59,7 +60,7 @@ let createHandlers = function(dispatch: any) {
 class NavBar extends React.Component<{
   dispatch: any;
   classes: any;
-  projectMenuAnchor: any;
+  projectMenuAnchor: null | ((element: HTMLElement) => HTMLElement);
 }> {
   private handlers: any;
   constructor(props: any) {
@@ -138,8 +139,8 @@ class NavBar extends React.Component<{
 //   projectMenuAnchor: PropTypes.object
 // };
 
-const mapStateToProps = (state: any) => ({
-  projectMenuAnchor: state.navbarReducer.projectMenuAnchor
+const mapStateToProps = (state: ApplicationState) => ({
+  projectMenuAnchor: state.navbar.projectMenuAnchor
 });
 
 //@ts-ignore

@@ -1,11 +1,18 @@
-import { combineReducers } from "redux";
+import { Reducer, combineReducers } from "redux";
 import { OPEN_MENU, CLOSE_MENU } from "../actions";
 
-const initialState = {
+export interface NavBarState {
+  projectMenuAnchor: null | ((element: HTMLElement) => HTMLElement);
+}
+
+const initialState: NavBarState = {
   projectMenuAnchor: null
 };
 
-const navbarReducer = (state = initialState, action: any) => {
+const navbarReducer: Reducer<NavBarState> = (
+  state = initialState,
+  action: any
+) => {
   switch (action.type) {
     case OPEN_MENU:
       return { ...state, projectMenuAnchor: action.anchor };
@@ -17,10 +24,20 @@ const navbarReducer = (state = initialState, action: any) => {
   }
 };
 
-function appReducer(state = {}, action: any) {
+export interface BasicState {}
+
+const basicReducer: Reducer<BasicState> = (state = {}, action: any) => {
   // For now, don't handle any actions
   // and just return the state given to us.
   return state;
+};
+
+export interface ApplicationState {
+  basic: BasicState;
+  navbar: NavBarState;
 }
 
-export default combineReducers({ appReducer, navbarReducer });
+export default combineReducers<ApplicationState>({
+  basic: basicReducer,
+  navbar: navbarReducer
+});
