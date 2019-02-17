@@ -1,5 +1,5 @@
 import { Reducer, combineReducers } from "redux";
-import * as actions from "../actions";
+import * as actions from "./actions";
 import { ActionType } from "typesafe-actions";
 
 export type AppAction = ActionType<typeof actions>;

@@ -2,7 +2,7 @@ import { Store, createStore, applyMiddleware, compose } from "redux";
 // import thunk from "redux-thunk";
 import { createLogger } from "redux-logger";
 // import api from "../middleware/api";
-import rootReducer, { ApplicationState } from "../reducers";
+import rootReducer, { ApplicationState } from "../store";
 import ReduxDevTools from "../components/ReduxDevTools";
 
 function configureStore(
@@ -19,7 +19,7 @@ function configureStore(
 
   // if (module.hot) {
   //   // Enable Webpack hot module replacement for reducers
-  //   module.hot.accept("../reducers", () => {
+  //   module.hot.accept("../store", () => {
   //     store.replaceReducer(rootReducer);
   //   });
   // }

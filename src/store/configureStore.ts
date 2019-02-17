@@ -1,6 +1,6 @@
 import * as prod from "./configureStore.prod";
 import * as dev from "./configureStore.dev";
-import { ApplicationState } from "../reducers";
+import { ApplicationState } from "../store";
 import { Store, AnyAction } from "redux";
 
 type configureStoreType = {

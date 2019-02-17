@@ -9,9 +9,9 @@ import MenuItem from "@material-ui/core/MenuItem";
 import Menu from "@material-ui/core/Menu";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
-import { openMenu, closeMenu } from "../../actions";
+import { openMenu, closeMenu } from "../../store/actions";
 import { CSSProperties } from "jss/css";
-import { ApplicationState } from "../../reducers";
+import { ApplicationState } from "../../store";
 
 const styles: Record<any, CSSProperties> = {
   root: {

@@ -9,7 +9,7 @@ import Homepage from "./pages/projects/homepage/Homepage";
 import SankeyRCV from "./pages/projects/sankeyrcv/SankeyRCV";
 import GreenLanes from "./pages/projects/greenlanes/GreenLanes";
 import { Store } from "redux";
-import { ApplicationState } from "./reducers";
+import { ApplicationState } from "./store";
 // import ReduxDevTools from "./components/ReduxDevTools";
 
 class App extends Component<{ store: Store<ApplicationState> }> {
