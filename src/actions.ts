@@ -1,11 +1,11 @@
+import { action } from "typesafe-actions";
+
 export const OPEN_MENU = "OPEN_MENU";
 export const CLOSE_MENU = "CLOSE_MENU";
 
-export const openMenu = (anchor: (element: HTMLElement) => HTMLElement) => ({
-  type: OPEN_MENU,
-  anchor: anchor
-});
+export const openMenu = (anchor: (element: HTMLElement) => HTMLElement) =>
+  action(OPEN_MENU, {
+    anchor: anchor
+  });
 
-export const closeMenu = () => ({
-  type: CLOSE_MENU
-});
+export const closeMenu = () => action(CLOSE_MENU);
