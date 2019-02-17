@@ -1,5 +1,3 @@
-// export default "";
-
 import * as prod from "./configureStore.prod";
 import * as dev from "./configureStore.dev";
 let configureStore: any;
