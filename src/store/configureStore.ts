@@ -1,6 +1,12 @@
-export default "";
+// export default "";
+
+import * as prod from "./configureStore.prod";
+import * as dev from "./configureStore.dev";
+let configureStore: any;
 if (process.env.NODE_ENV === "production") {
-  module.exports = require("./configureStore.prod");
+  configureStore = prod;
 } else {
-  module.exports = require("./configureStore.dev");
+  configureStore = dev;
 }
+
+export { configureStore };
