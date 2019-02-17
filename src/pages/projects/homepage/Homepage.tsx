@@ -57,7 +57,7 @@ class Homepage extends Component {
                 >
                   React Router
                 </Link>{" "}
-                for routing. In February 2019 I migrated from Javscript to
+                for routing. In February 2019 I migrated from Javascript to
                 TypeScript. I use{" "}
                 <Link
                   to="//firebase.google.com"
