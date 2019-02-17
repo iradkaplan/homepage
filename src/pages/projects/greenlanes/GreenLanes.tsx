@@ -414,6 +414,25 @@ class BikeLanes extends Component {
               been there, and unable to find records of the bike experience
               there, I didn’t feel comfortable including it on my map.
             </p>
+            <Typography variant="h5" style={{ color: "white" }}>
+              Revision History
+            </Typography>
+            <div className="list">
+              <ul className="body-text">
+                <li>
+                  <b>February 17, 2019 -</b> Added new Polk lanes, bus island on
+                  Masonic at Geary, and Gorgas cut-through.
+                </li>
+                <li>
+                  <b>February 1, 2019 -</b> Added block of Bay Street, made a
+                  gap for the often blocked driveway at One Polk, and added new
+                  Valencia lanes.
+                </li>
+                <li>
+                  <b>January 30, 2019 -</b> Initial version published.
+                </li>
+              </ul>
+            </div>
             <Typography variant="h4" style={{ color: "white" }}>
               Technical Details
             </Typography>
