@@ -1,12 +1,14 @@
 import React from "react";
 
-const LoadingComponent: ({
+type LoadingComponentType = ({
   isLoading,
   error
 }: {
   isLoading: boolean | null;
   error: Error | null;
-}) => JSX.Element | null = ({ isLoading, error }) => {
+}) => JSX.Element | null;
+
+const LoadingComponent: LoadingComponentType = ({ isLoading, error }) => {
   // Handle the loading state
   if (isLoading) {
     return <div>Loading...</div>;
