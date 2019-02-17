@@ -3,7 +3,7 @@ import { createStore, applyMiddleware } from "redux";
 // import api from "../middleware/api";
 import rootReducer from "../reducers";
 
-const configureStore = preloadedState =>
+const configureStore = (preloadedState: any) =>
   createStore(rootReducer, preloadedState, applyMiddleware());
 
 export default configureStore;

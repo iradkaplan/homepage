@@ -7,7 +7,7 @@ import Paper from "@material-ui/core/Paper";
 import { Link } from "react-router-dom";
 import "mapbox-gl/dist/mapbox-gl.css";
 import "./GreenLanes.css";
-import data from "./greenLaneData";
+import data from "./greenLaneData.json";
 import SFBikeMap from "./SFBikeMap.png";
 import GoogleBikeMap from "./GoogleBikeMap.png";
 import LondonBikePlan from "./LondonBikePlan.png";
@@ -65,9 +65,14 @@ class BikeLanes extends Component {
               <DeckGL
                 initialViewState={initialViewState}
                 controller={true}
+                //@ts-ignore
                 layers={layers}
               >
-                <StaticMap mapboxApiAccessToken={MAPBOX_ACCESS_TOKEN} />
+                <StaticMap
+                  mapboxApiAccessToken={MAPBOX_ACCESS_TOKEN}
+                  width="auto"
+                  height="auto"
+                />
               </DeckGL>
             </div>
           </Grid>

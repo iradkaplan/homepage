@@ -5,7 +5,7 @@ const initialState = {
   projectMenuAnchor: null
 };
 
-const navbarReducer = (state = initialState, action) => {
+const navbarReducer = (state = initialState, action: any) => {
   switch (action.type) {
     case OPEN_MENU:
       return { ...state, projectMenuAnchor: action.anchor };
@@ -17,7 +17,7 @@ const navbarReducer = (state = initialState, action) => {
   }
 };
 
-function appReducer(state = {}, action) {
+function appReducer(state = {}, action: any) {
   // For now, don't handle any actions
   // and just return the state given to us.
   return state;

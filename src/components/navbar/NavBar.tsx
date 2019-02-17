@@ -3,15 +3,16 @@ import PropTypes from "prop-types";
 import { withStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
-import Button from "@material-ui/core/Button";
+import Button, { ButtonProps } from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import MenuItem from "@material-ui/core/MenuItem";
 import Menu from "@material-ui/core/Menu";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { openMenu, closeMenu } from "../../actions";
+import { CSSProperties } from "jss/css";
 
-const styles = {
+const styles: Record<any, CSSProperties> = {
   root: {
     flexGrow: 1
   },
@@ -24,11 +25,21 @@ const styles = {
   }
 };
 
-let createHandlers = function(dispatch) {
+const HomeLink = (props: any) => <Link {...props} to="/" />;
+const ResumeLink = (props: any) => <Link {...props} to="/resume" />;
+const HomepageLink = (props: any) => (
+  <Link {...props} to="/projects/homepage" />
+);
+const RCVLink = (props: any) => <Link {...props} to="/projects/sf-rcv" />;
+const GreenLanesLink = (props: any) => (
+  <Link {...props} to="/projects/greenlanes" />
+);
+
+let createHandlers = function(dispatch: any) {
   // let onClick = function(node, data) {
   //   dispatch(actions.nodeClicked(data));
   // };
-  let handleMenu = event => {
+  let handleMenu = (event: any) => {
     // this.setState({ projectMenuAnchor: event.currentTarget });
     dispatch(openMenu(event.currentTarget));
   };
@@ -45,8 +56,13 @@ let createHandlers = function(dispatch) {
   };
 };
 
-class NavBar extends React.Component {
-  constructor(props) {
+class NavBar extends React.Component<{
+  dispatch: any;
+  classes: any;
+  projectMenuAnchor: any;
+}> {
+  private handlers: any;
+  constructor(props: any) {
     super(props);
     this.handlers = createHandlers(this.props.dispatch);
   }
@@ -74,12 +90,8 @@ class NavBar extends React.Component {
             <Typography variant="h6" color="inherit" className={classes.title}>
               Ira Kaplan
             </Typography>
-            <Button component={Link} to="/">
-              Home
-            </Button>
-            <Button component={Link} to="/resume/">
-              Resume
-            </Button>
+            <Button component={HomeLink}>Home</Button>
+            <Button component={ResumeLink}>Resume</Button>
             <div>
               <Button
                 aria-owns={projectMenuAnchor ? "menu-appbar" : undefined}
@@ -96,22 +108,19 @@ class NavBar extends React.Component {
                 onClose={this.handlers.handleClose}
               >
                 <MenuItem
-                  component={Link}
-                  to="/projects/greenlanes/"
+                  component={GreenLanesLink}
                   onClick={this.handlers.handleClose}
                 >
                   SF Protected Green Lanes
                 </MenuItem>
                 <MenuItem
-                  component={Link}
-                  to="/projects/sf-rcv/"
+                  component={RCVLink}
                   onClick={this.handlers.handleClose}
                 >
                   SF Vote Diagrams
                 </MenuItem>
                 <MenuItem
-                  component={Link}
-                  to="/projects/homepage/"
+                  component={HomepageLink}
                   onClick={this.handlers.handleClose}
                 >
                   This Website
@@ -124,13 +133,14 @@ class NavBar extends React.Component {
     );
   }
 }
-NavBar.propTypes = {
-  classes: PropTypes.object.isRequired,
-  projectMenuAnchor: PropTypes.object
-};
+// NavBar.propTypes = {
+//   classes: PropTypes.object.isRequired,
+//   projectMenuAnchor: PropTypes.object
+// };
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state: any) => ({
   projectMenuAnchor: state.navbarReducer.projectMenuAnchor
 });
 
+//@ts-ignore
 export default connect(mapStateToProps)(withStyles(styles)(NavBar));
