@@ -1,6 +1,6 @@
 import React from "react";
-import PropTypes from "prop-types";
 import { withStyles } from "@material-ui/core/styles";
+import { Theme, createStyles } from "@material-ui/core";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Button, { ButtonProps } from "@material-ui/core/Button";
@@ -13,7 +13,13 @@ import { openMenu, closeMenu } from "../../store/actions";
 import { CSSProperties } from "jss/css";
 import { ApplicationState } from "../../store";
 
-const styles: Record<any, CSSProperties> = {
+declare interface MenuEvent extends React.MouseEvent<HTMLElement> {
+  currentTarget: EventTarget & HTMLElement;
+}
+
+const drawerWidth = 240;
+
+const styles = createStyles({
   root: {
     flexGrow: 1
   },
@@ -24,7 +30,40 @@ const styles: Record<any, CSSProperties> = {
   link: {
     textDecoration: "none"
   }
-};
+});
+
+// const styles2 = (theme: Theme) =>
+//   createStyles({
+//     root: {
+//       display: "flex"
+//     },
+//     drawer: {
+//       [theme.breakpoints.up("sm")]: {
+//         width: drawerWidth,
+//         flexShrink: 0
+//       }
+//     },
+//     appBar: {
+//       marginLeft: drawerWidth,
+//       [theme.breakpoints.up("sm")]: {
+//         width: `calc(100% - ${drawerWidth}px)`
+//       }
+//     },
+//     menuButton: {
+//       marginRight: 20,
+//       [theme.breakpoints.up("sm")]: {
+//         display: "none"
+//       }
+//     },
+//     toolbar: theme.mixins.toolbar,
+//     drawerPaper: {
+//       width: drawerWidth
+//     },
+//     content: {
+//       flexGrow: 1,
+//       padding: theme.spacing.unit * 3
+//     }
+//   });
 
 const HomeLink = (props: any) => <Link {...props} to="/" />;
 const ResumeLink = (props: any) => <Link {...props} to="/resume" />;
@@ -36,11 +75,11 @@ const GreenLanesLink = (props: any) => (
   <Link {...props} to="/projects/greenlanes" />
 );
 
-let createHandlers = function(dispatch: any) {
+let createHandlers = function(dispatch: Function) {
   // let onClick = function(node, data) {
   //   dispatch(actions.nodeClicked(data));
   // };
-  let handleMenu = (event: any) => {
+  let handleMenu = (event: MenuEvent) => {
     // this.setState({ projectMenuAnchor: event.currentTarget });
     dispatch(openMenu(event.currentTarget));
   };

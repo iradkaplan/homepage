@@ -3,7 +3,7 @@ import { action } from "typesafe-actions";
 export const OPEN_MENU = "OPEN_MENU";
 export const CLOSE_MENU = "CLOSE_MENU";
 
-export const openMenu = (anchor: (element: HTMLElement) => HTMLElement) =>
+export const openMenu = (anchor: HTMLElement) =>
   action(OPEN_MENU, {
     anchor: anchor
   });

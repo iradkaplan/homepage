@@ -5,7 +5,7 @@ import { ActionType } from "typesafe-actions";
 export type AppAction = ActionType<typeof actions>;
 
 export interface NavBarState {
-  projectMenuAnchor: null | ((element: HTMLElement) => HTMLElement);
+  projectMenuAnchor: null | HTMLElement;
 }
 
 const initialState: NavBarState = {
