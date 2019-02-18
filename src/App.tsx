@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import { Provider } from "react-redux";
 import Loadable from "react-loadable";
 import "./App.css";
-import NavBar from "./components/navbar/NavBar";
+import NavBar from "./components/NavBar";
 import { Store } from "redux";
 import { ApplicationState } from "./store";
 import { LoadingComponent } from "./components/LoadingComponent";
