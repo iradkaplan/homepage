@@ -20,7 +20,7 @@ class SankeyRCV extends Component {
             alignItems="center"
           >
             <Grid item xs={12} className="body-content">
-              <Typography variant="h3" style={{ color: "white" }}>
+              <Typography variant="h3" paragraph>
                 Making sense of a complex election
               </Typography>
               <Typography variant="body1" component="p" paragraph>

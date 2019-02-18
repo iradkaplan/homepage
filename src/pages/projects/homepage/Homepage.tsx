@@ -26,13 +26,13 @@ class Homepage extends Component {
               </Paper>
             </Grid>
             <Grid item xs={12} md={6} lg={4} className="body-content">
-              <p className="body-text">
+              <Typography variant="body1" component="p" paragraph>
                 I made this website in January 2019 as a place to document some
                 of my work.
                 <br />
                 (Expect periodic updates to the Projects list!)
-              </p>
-              <p className="body-text">
+              </Typography>
+              <Typography variant="body1" component="p" paragraph>
                 I used{" "}
                 <Link
                   to="//facebook.github.io/create-react-app/"
@@ -74,7 +74,7 @@ class Homepage extends Component {
                 >
                   here.
                 </Link>
-              </p>
+              </Typography>
             </Grid>
           </Grid>
         </div>

@@ -38,6 +38,8 @@ export default function createTheme(options?: ThemeOptions) {
     typography: {
       useNextVariants: true,
       fontFamily: ["comic sans ms", "comic sans"].join(","),
+      h3: { color: "white" },
+      h5: { color: "white" },
       body1: { fontSize: 16, textAlign: "left", color: "white" },
       body2: {
         fontSize: 12,

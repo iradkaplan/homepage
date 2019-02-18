@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Grid from "@material-ui/core/Grid";
 import photo from "./photo.jpg";
 import "./Home.css";
+import { Typography } from "@material-ui/core";
 
 class Home extends Component {
   render() {
@@ -19,13 +20,15 @@ class Home extends Component {
               <img src={photo} className="Main-photo" alt="Me" />
             </Grid>
             <Grid item xs={12} sm={7} className="body-content">
-              <p>
+              <Typography variant="h3" component="p" paragraph>
                 Welcome to my homepage! <br />
                 <span className="caption">
                   (We're bringing them back in 2019)
                 </span>
-              </p>
-              <p>I'm Ira.</p>
+              </Typography>
+              <Typography variant="h5" component="p" paragraph>
+                I'm Ira.
+              </Typography>
               <Grid
                 container
                 direction="row"
@@ -33,16 +36,18 @@ class Home extends Component {
                 alignItems="flex-start"
               >
                 <Grid item xs={4} md={6}>
-                  <p
-                    className="subheader"
+                  <Typography
+                    variant="h5"
+                    component="p"
                     style={{ textAlign: "right", lineHeight: "1.2em" }}
                   >
                     I'm an&nbsp;
-                  </p>
+                  </Typography>
                 </Grid>
                 <Grid item xs={8} md={6}>
-                  <p
-                    className="subheader"
+                  <Typography
+                    variant="h5"
+                    component="p"
                     style={{ textAlign: "left", lineHeight: "1.2em" }}
                   >
                     urbanist.{" "}
@@ -80,7 +85,7 @@ class Home extends Component {
                       🥾
                     </span>{" "}
                     <br />
-                  </p>
+                  </Typography>
                 </Grid>
               </Grid>
             </Grid>

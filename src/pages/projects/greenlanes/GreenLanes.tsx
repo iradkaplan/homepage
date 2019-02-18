@@ -391,14 +391,14 @@ class BikeLanes extends Component {
               to conflicts with cars:
             </Typography>
             <div className="list">
-              <ul className="body-text">
+              <Typography component="ul" variant="body1">
                 <li>Unprotected lanes</li>
                 <li>Mixing zones</li>
                 <li>Buffered bike lanes with no barrier to keep cars out</li>
                 <li>
                   Unprotected intersections on otherwise protected bike lanes
                 </li>
-              </ul>
+              </Typography>
             </div>
             <Typography variant="body1" component="p" paragraph>
               I excluded most of the length of the paint-protected green lanes
@@ -414,11 +414,9 @@ class BikeLanes extends Component {
               been there, and unable to find records of the bike experience
               there, I didn’t feel comfortable including it on my map.
             </Typography>
-            <Typography variant="h5" style={{ color: "white" }}>
-              Revision History
-            </Typography>
+            <Typography variant="h5">Revision History</Typography>
             <div className="list">
-              <ul className="body-text">
+              <Typography component="ul" variant="body1">
                 <li>
                   <b>February 17, 2019 -</b> Added new Polk lanes, bus island on
                   Masonic at Geary, and Gorgas cut-through.
@@ -431,7 +429,7 @@ class BikeLanes extends Component {
                 <li>
                   <b>January 30, 2019 -</b> Initial version published.
                 </li>
-              </ul>
+              </Typography>
             </div>
             <Typography variant="h4" style={{ color: "white" }}>
               Technical Details
