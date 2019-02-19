@@ -1,11 +1,27 @@
 import React, { Component } from "react";
 import Grid from "@material-ui/core/Grid";
+import { withStyles } from "@material-ui/core/styles";
 import photo from "./photo.jpg";
 import "./Home.css";
-import { Typography } from "@material-ui/core";
+import { Typography, Theme, createStyles } from "@material-ui/core";
+import { CSSProperties } from "@material-ui/core/styles/withStyles";
 
-class Home extends Component {
+const styles = (theme: Theme) =>
+  createStyles({
+    root: {
+      display: "flex"
+    },
+    sansSerif: {
+      fontFamily: theme.typography.sansSerifFonts
+    },
+    alignLeft: {
+      textAlign: "left"
+    }
+  });
+
+class Home extends Component<{ classes: any }> {
   render() {
+    const { classes } = this.props;
     return (
       <>
         <div className="App-body">
@@ -18,12 +34,22 @@ class Home extends Component {
             <Grid item xs={12} className="body-content">
               <Typography variant="h3" component="p" paragraph>
                 Welcome to my homepage! <br />
-                <span className="caption">
-                  (We're bringing them back in 2019)
-                </span>
+              </Typography>
+              <Typography
+                variant="caption"
+                component="p"
+                className={classes.alignLeft}
+                paragraph
+              >
+                (We're bringing them back in 2019)
               </Typography>
               <img src={photo} className="Main-photo" alt="Me" />
-              <Typography variant="h5" component="p" paragraph>
+              <Typography
+                variant="h5"
+                component="p"
+                className={classes.sansSerif}
+                paragraph
+              >
                 I'm Ira.
               </Typography>
               <Grid
@@ -36,6 +62,7 @@ class Home extends Component {
                   <Typography
                     variant="h5"
                     component="p"
+                    className={classes.sansSerif}
                     style={{ textAlign: "right", lineHeight: "1.2em" }}
                   >
                     I'm an&nbsp;
@@ -45,6 +72,7 @@ class Home extends Component {
                   <Typography
                     variant="h5"
                     component="p"
+                    className={classes.sansSerif}
                     style={{ textAlign: "left", lineHeight: "1.2em" }}
                   >
                     urbanist.{" "}
@@ -96,4 +124,4 @@ class Home extends Component {
   }
 }
 
-export default Home;
+export default withStyles(styles)(Home);
