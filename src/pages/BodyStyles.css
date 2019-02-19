@@ -21,14 +21,14 @@
   }
 }*/
 
-@media (max-width: 599px) {
+/* @media (max-width: 599px) {
   .App-body {
     min-height: calc(100vh - 56px);
   }
-  /* .navbar-shim {
+  .navbar-shim {
     min-height: 56px;
-  } */
-}
+  }
+} */
 
 .App-link {
   color: #61dafb;
