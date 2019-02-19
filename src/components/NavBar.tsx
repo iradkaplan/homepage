@@ -77,13 +77,36 @@ const styles = (theme: Theme) =>
       textAlign: "left",
       flexGrow: 1
     },
+    rippleColor: {
+      color: theme.palette.secondary.main
+    },
+    darkBlueHover: {
+      "&:hover": {
+        background: theme.palette.secondary.dark
+      }
+    },
+    lightBlueHover: {
+      "&:hover": {
+        background: theme.palette.secondary.light
+      }
+    },
+    noHover: {
+      "&:hover": {
+        backgroundColor: "transparent"
+      }
+    },
+    noLinkVisibility: {
+      textDecoration: "none"
+    },
     content: {
       flexGrow: 1,
       padding: theme.spacing.unit * 3
     }
   });
 
-const HomeLink = (props: any) => <Link {...props} to="/" />;
+const HomeLink = (props: any) => (
+  <Link style={{ textDecoration: "none" }} {...props} to="/" />
+);
 const ResumeLink = (props: any) => <Link {...props} to="/resume" />;
 const HomepageLink = (props: any) => (
   <Link {...props} to="/projects/homepage" />
@@ -121,13 +144,25 @@ class NavBar extends React.Component<Props & RouteComponentProps> {
     const navList = (
       <div>
         <List>
-          <ListItem button key="Home" component={HomeLink}>
+          <ListItem
+            button
+            TouchRippleProps={{ classes: { root: classes.rippleColor } }}
+            key="Home"
+            component={HomeLink}
+            className={classes.darkBlueHover}
+          >
             <ListItemText
               classes={{ primary: classes.navText }}
               primary="Home"
             />
           </ListItem>
-          <ListItem button key="Resume" component={ResumeLink}>
+          <ListItem
+            button
+            TouchRippleProps={{ classes: { root: classes.rippleColor } }}
+            key="Resume"
+            component={ResumeLink}
+            className={classes.darkBlueHover}
+          >
             <ListItemText
               classes={{ primary: classes.navText }}
               primary="Resume"
@@ -140,19 +175,37 @@ class NavBar extends React.Component<Props & RouteComponentProps> {
               primary="Projects:"
             />
           </ListItem>
-          <ListItem button key="GreenLanes" component={GreenLanesLink}>
+          <ListItem
+            button
+            TouchRippleProps={{ classes: { root: classes.rippleColor } }}
+            key="GreenLanes"
+            component={GreenLanesLink}
+            className={classes.darkBlueHover}
+          >
             <ListItemText
               classes={{ primary: classes.navText }}
               primary="-> SF Green Lanes"
             />
           </ListItem>
-          <ListItem button key="SF Vote Diagrams" component={RCVLink}>
+          <ListItem
+            button
+            TouchRippleProps={{ classes: { root: classes.rippleColor } }}
+            key="SF Vote Diagrams"
+            component={RCVLink}
+            className={classes.darkBlueHover}
+          >
             <ListItemText
               classes={{ primary: classes.navText }}
               primary="-> SF Vote Diagrams"
             />
           </ListItem>
-          <ListItem button key="Homepage" component={HomepageLink}>
+          <ListItem
+            button
+            TouchRippleProps={{ classes: { root: classes.rippleColor } }}
+            key="Homepage"
+            component={HomepageLink}
+            className={classes.darkBlueHover}
+          >
             <ListItemText
               classes={{ primary: classes.navText }}
               primary="-> This Website"
@@ -172,6 +225,7 @@ class NavBar extends React.Component<Props & RouteComponentProps> {
                 variant="h6"
                 color="inherit"
                 noWrap
+                component={HomeLink}
                 className={classes.title}
               >
                 Ira Kaplan
@@ -186,6 +240,7 @@ class NavBar extends React.Component<Props & RouteComponentProps> {
                     root: classes.mono,
                     label: classes.label
                   }}
+                  TouchRippleProps={{ classes: { root: classes.rippleColor } }}
                 >
                   Menu
                 </Button>
@@ -198,38 +253,62 @@ class NavBar extends React.Component<Props & RouteComponentProps> {
                   <MenuItem
                     component={HomeLink}
                     onClick={this.handlers.handleClose}
+                    className={classes.lightBlueHover}
                     classes={{ root: classes.mono }}
+                    TouchRippleProps={{
+                      classes: { root: classes.rippleColor }
+                    }}
                   >
                     Home
                   </MenuItem>
                   <MenuItem
                     component={ResumeLink}
                     onClick={this.handlers.handleClose}
+                    className={classes.lightBlueHover}
                     classes={{ root: classes.mono }}
+                    TouchRippleProps={{
+                      classes: { root: classes.rippleColor }
+                    }}
                   >
                     Resume
                   </MenuItem>
-                  <MenuItem disableRipple classes={{ root: classes.mono }}>
+                  <MenuItem
+                    disableRipple
+                    className={classes.noHover}
+                    classes={{ root: classes.mono }}
+                  >
                     Projects:
                   </MenuItem>
                   <MenuItem
                     component={GreenLanesLink}
                     onClick={this.handlers.handleClose}
+                    className={classes.lightBlueHover}
                     classes={{ root: classes.mono }}
+                    TouchRippleProps={{
+                      classes: { root: classes.rippleColor }
+                    }}
                   >
                     -> SF Green Lanes
                   </MenuItem>
                   <MenuItem
                     component={RCVLink}
                     onClick={this.handlers.handleClose}
+                    className={classes.lightBlueHover}
                     classes={{ root: classes.mono }}
+                    TouchRippleProps={{
+                      classes: { root: classes.rippleColor }
+                    }}
                   >
                     -> SF Vote Diagrams
                   </MenuItem>
                   <MenuItem
                     component={HomepageLink}
                     onClick={this.handlers.handleClose}
+                    className={classes.lightBlueHover}
                     classes={{ root: classes.mono }}
+                    TouchRippleProps={{
+                      classes: { root: classes.rippleColor }
+                    }}
                   >
                     -> This Website
                   </MenuItem>
@@ -251,6 +330,7 @@ class NavBar extends React.Component<Props & RouteComponentProps> {
                 <Typography
                   variant="h6"
                   classes={{ root: classes.navText }}
+                  component={HomeLink}
                   noWrap
                 >
                   Ira Kaplan
