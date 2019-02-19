@@ -4,11 +4,11 @@
   height: 40vmin;
 }
 
-@media (min-width: 960px) {
+/* @media (min-width: 960px) {
   .Main-photo {
     height: 60vh;
   }
-}
+} */
 
 .subheader {
   margin-top: 0;
