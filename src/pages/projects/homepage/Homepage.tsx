@@ -14,16 +14,9 @@ class Homepage extends Component {
           <Grid
             container
             direction="row"
-            justify="space-evenly"
-            alignItems="center"
+            justify="flex-start"
+            alignItems="flex-start"
           >
-            <Grid item xs={12} md={6} className="body-content">
-              <Paper className="image-paper">
-                <img src={screenshot} className="screenshot" alt="Me" />
-                <br />
-                <Typography variant="caption">Version 1.0 😊</Typography>
-              </Paper>
-            </Grid>
             <Grid item xs={12} md={6} lg={4} className="body-content">
               <Typography variant="body1" component="p" paragraph>
                 I made this website in January 2019 as a place to document some
@@ -74,6 +67,13 @@ class Homepage extends Component {
                   here.
                 </Link>
               </Typography>
+            </Grid>
+            <Grid item xs={12} md={6} className="body-content">
+              <Paper className="image-paper">
+                <img src={screenshot} className="screenshot" alt="Me" />
+                <br />
+                <Typography variant="caption">Version 1.0 😊</Typography>
+              </Paper>
             </Grid>
           </Grid>
         </div>
