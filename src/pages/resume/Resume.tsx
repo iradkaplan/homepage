@@ -18,8 +18,8 @@ class Resume extends Component {
             alignItems="flex-start"
           >
             <Grid item xs={12} sm={10} md={8} lg={6} xl={4}>
-              <Typography variant="body1">
-                Here you can view my resume, or click the image to open a PDF.
+              <Typography variant="body1" paragraph>
+                You can view my resume below, or click the image to open a PDF.
                 You can also{" "}
                 <Link
                   to="//linkedin.com/in/irakaplan"

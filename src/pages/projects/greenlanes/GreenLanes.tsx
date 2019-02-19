@@ -46,7 +46,7 @@ class GreenLanes extends Component {
           alignItems="center"
         >
           <Grid item xs={12} className="body-content">
-            <Typography variant="h3">
+            <Typography variant="h4">
               Mapping San Francisco's Protected Green Lanes
             </Typography>
           </Grid>
@@ -92,7 +92,7 @@ class GreenLanes extends Component {
               In this article, I refer to biking several times, but I also mean
               these other forms of micromobility.
             </Typography>
-            <Typography variant="h3">
+            <Typography variant="h4">
               Why is it so hard to get around San Francisco?
             </Typography>
             <Typography variant="body1" component="p" paragraph>
@@ -172,7 +172,7 @@ class GreenLanes extends Component {
               disjointed. You decide not to bike to your meetup. Maybe there’s a
               convenient Muni route, but if not you’ll take a car.
             </Typography>
-            <Typography variant="h4">
+            <Typography variant="h5">
               It doesn’t have to be this way.
             </Typography>
             <Typography variant="body1" component="p" paragraph>
@@ -289,7 +289,7 @@ class GreenLanes extends Component {
               </Paper>
             </Grid>
             <p />
-            <Typography variant="h4">
+            <Typography variant="h5">
               Why are protected lanes so important?
             </Typography>
             <Typography variant="body1" component="p" paragraph>
@@ -323,7 +323,7 @@ class GreenLanes extends Component {
               micromobility makes our city’s famous hills less of a barrier than
               ever before.
             </Typography>
-            <Typography variant="h4">
+            <Typography variant="h5">
               Why do we want people to use micromobility?
             </Typography>
             <Typography variant="body1" component="p" paragraph>
@@ -342,7 +342,7 @@ class GreenLanes extends Component {
               you would have to use to match the amount of plastic in a Tesla?
               Me neither, but I bet it’s a lot.
             </Typography>
-            <Typography variant="h4">Data Methodology</Typography>
+            <Typography variant="h5">Data Methodology</Typography>
             <Typography variant="body1" component="p" paragraph>
               This map is meant to be an accurate representation of San
               Francisco’s protected green lanes, and I intend to update it
@@ -425,7 +425,7 @@ class GreenLanes extends Component {
                 </li>
               </Typography>
             </div>
-            <Typography variant="h4">Technical Details</Typography>
+            <Typography variant="h5">Technical Details</Typography>
             <Typography variant="body1" component="p" paragraph>
               The map is in Deck.gl with react-map-gl. I exported the data layer
               from QGIS to GeoJSON, which is then read into the map.{" "}

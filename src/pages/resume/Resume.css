@@ -1,6 +1,7 @@
 @import "../BodyStyles.css";
 
 .Resume-image {
-  height: 80vmin;
+  height: 70vmin;
   min-height: 400px;
+  max-height: 65vw;
 }
