@@ -29,22 +29,32 @@ export default function createTheme(options?: ThemeOptions) {
     palette: {
       type: "light",
       primary: {
-        main: "#222222"
+        light: "#494949",
+        main: "#222222",
+        dark: "#000000",
+        contrastText: "#dddddd"
       },
       secondary: {
-        main: "#2292bf"
+        light: "#64c2f2",
+        main: "#2292bf",
+        dark: "#00648f",
+        contrastText: "#eeeeee"
       }
     },
     typography: {
       useNextVariants: true,
-      fontFamily: ["comic sans ms", "comic sans"].join(","),
-      h3: { color: "white" },
-      h5: { color: "white" },
-      body1: { fontSize: 16, textAlign: "left", color: "white" },
+      fontFamily: "Open Sans",
+      h1: { fontFamily: "Source Code Pro" },
+      h2: { fontFamily: "Source Code Pro" },
+      h3: { fontFamily: "Source Code Pro" },
+      h4: { fontFamily: "Source Code Pro" },
+      h5: { fontFamily: "Source Code Pro" },
+      h6: { fontFamily: "Source Code Pro" },
+      body1: { fontSize: 16, textAlign: "left" /*, color: "white" */ },
       body2: {
         fontSize: 12,
         textAlign: "left",
-        color: "white",
+        // color: "white",
         fontStyle: "italic"
       }
     },

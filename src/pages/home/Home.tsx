@@ -8,7 +8,6 @@ class Home extends Component {
   render() {
     return (
       <>
-        <Grid item xs={12} className="navbar-shim" />
         <div className="App-body">
           <Grid
             container

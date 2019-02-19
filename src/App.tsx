@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Provider } from "react-redux";
 import Loadable from "react-loadable";
 import "./App.css";
@@ -41,12 +41,18 @@ class App extends Component<{ store: Store<ApplicationState> }> {
         <Router>
           <MuiThemeProvider theme={theme}>
             <div className="App">
-              <NavBar />
-              <Route path="/" exact component={AsyncHome} />
-              <Route path="/resume/" component={AsyncResume} />
-              <Route path="/projects/homepage/" component={AsyncHomepage} />
-              <Route path="/projects/sf-rcv/" component={AsyncRCV} />
-              <Route path="/projects/greenlanes/" component={AsyncGreenLanes} />
+              <NavBar>
+                <Switch>
+                  <Route path="/" exact component={AsyncHome} />
+                  <Route path="/resume/" component={AsyncResume} />
+                  <Route path="/projects/homepage/" component={AsyncHomepage} />
+                  <Route path="/projects/sf-rcv/" component={AsyncRCV} />
+                  <Route
+                    path="/projects/greenlanes/"
+                    component={AsyncGreenLanes}
+                  />
+                </Switch>
+              </NavBar>
               {/* <ReduxDevTools /> */}
             </div>
           </MuiThemeProvider>

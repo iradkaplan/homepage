@@ -39,7 +39,6 @@ class BikeLanes extends Component {
     ];
     return (
       <>
-        <Grid item xs={12} className="navbar-shim" />
         <Grid
           container
           direction="row"
@@ -47,10 +46,7 @@ class BikeLanes extends Component {
           alignItems="center"
         >
           <Grid item xs={12} className="body-content">
-            <Typography
-              variant="h3"
-              style={{ color: "white", textAlign: "center" }}
-            >
+            <Typography variant="h3">
               Mapping San Francisco's Protected Green Lanes
             </Typography>
           </Grid>
@@ -96,7 +92,7 @@ class BikeLanes extends Component {
               In this article, I refer to biking several times, but I also mean
               these other forms of micromobility.
             </Typography>
-            <Typography variant="h3" style={{ color: "white" }}>
+            <Typography variant="h3">
               Why is it so hard to get around San Francisco?
             </Typography>
             <Typography variant="body1" component="p" paragraph>
@@ -106,7 +102,7 @@ class BikeLanes extends Component {
               options. The city is covered with colorful lines showing all the
               great places to bike, scoot, and skateboard.
             </Typography>
-            <Typography variant="h3" style={{ color: "white" }} />
+            <Typography variant="h3" />
             <Grid
               container
               direction="row"
@@ -176,7 +172,7 @@ class BikeLanes extends Component {
               disjointed. You decide not to bike to your meetup. Maybe there’s a
               convenient Muni route, but if not you’ll take a car.
             </Typography>
-            <Typography variant="h4" style={{ color: "white" }}>
+            <Typography variant="h4">
               It doesn’t have to be this way.
             </Typography>
             <Typography variant="body1" component="p" paragraph>
@@ -293,7 +289,7 @@ class BikeLanes extends Component {
               </Paper>
             </Grid>
             <p />
-            <Typography variant="h4" style={{ color: "white" }}>
+            <Typography variant="h4">
               Why are protected lanes so important?
             </Typography>
             <Typography variant="body1" component="p" paragraph>
@@ -327,7 +323,7 @@ class BikeLanes extends Component {
               micromobility makes our city’s famous hills less of a barrier than
               ever before.
             </Typography>
-            <Typography variant="h4" style={{ color: "white" }}>
+            <Typography variant="h4">
               Why do we want people to use micromobility?
             </Typography>
             <Typography variant="body1" component="p" paragraph>
@@ -346,9 +342,7 @@ class BikeLanes extends Component {
               you would have to use to match the amount of plastic in a Tesla?
               Me neither, but I bet it’s a lot.
             </Typography>
-            <Typography variant="h4" style={{ color: "white" }}>
-              Data Methodology
-            </Typography>
+            <Typography variant="h4">Data Methodology</Typography>
             <Typography variant="body1" component="p" paragraph>
               This map is meant to be an accurate representation of San
               Francisco’s protected green lanes, and I intend to update it
@@ -370,13 +364,13 @@ class BikeLanes extends Component {
               be:
             </Typography>
             <div className="list">
-              <ul className="body-text">
+              <Typography component="ul" variant="body1">
                 <li>Paved </li>
                 <li>
                   Separated from cars by a either a physical barrier or a very
                   substantial painted buffer
                 </li>
-              </ul>
+              </Typography>
             </div>
             <Typography variant="body1" component="p" paragraph>
               Mixing with pedestrians is fine as long as that’s an intended use
@@ -431,9 +425,7 @@ class BikeLanes extends Component {
                 </li>
               </Typography>
             </div>
-            <Typography variant="h4" style={{ color: "white" }}>
-              Technical Details
-            </Typography>
+            <Typography variant="h4">Technical Details</Typography>
             <Typography variant="body1" component="p" paragraph>
               The map is in Deck.gl with react-map-gl. I exported the data layer
               from QGIS to GeoJSON, which is then read into the map.{" "}

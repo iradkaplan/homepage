@@ -10,7 +10,6 @@ class Homepage extends Component {
   render() {
     return (
       <>
-        <Grid item xs={12} className="navbar-shim" />
         <div className="App-body">
           <Grid
             container
@@ -22,7 +21,7 @@ class Homepage extends Component {
               <Paper className="image-paper">
                 <img src={screenshot} className="screenshot" alt="Me" />
                 <br />
-                <Typography variant="caption">Homepageception</Typography>
+                <Typography variant="caption">Version 1.0 😊</Typography>
               </Paper>
             </Grid>
             <Grid item xs={12} md={6} lg={4} className="body-content">
