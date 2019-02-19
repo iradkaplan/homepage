@@ -247,7 +247,9 @@ class NavBar extends React.Component<Props & RouteComponentProps> {
           </Hidden>
         </nav>
         <main className={classes.content}>
-          <div className={classes.toolbar} />
+          <Hidden smUp implementation="css">
+            <div className={classes.toolbar} />
+          </Hidden>
           {children}
         </main>
       </div>

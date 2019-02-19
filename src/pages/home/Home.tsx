@@ -12,29 +12,27 @@ class Home extends Component {
           <Grid
             container
             direction="row"
-            justify="space-evenly"
+            justify="flex-start"
             alignItems="center"
           >
-            <Grid item xs={12} sm={5} className="body-content">
-              <img src={photo} className="Main-photo" alt="Me" />
-            </Grid>
-            <Grid item xs={12} sm={7} className="body-content">
+            <Grid item xs={12} className="body-content">
               <Typography variant="h3" component="p" paragraph>
                 Welcome to my homepage! <br />
                 <span className="caption">
                   (We're bringing them back in 2019)
                 </span>
               </Typography>
+              <img src={photo} className="Main-photo" alt="Me" />
               <Typography variant="h5" component="p" paragraph>
                 I'm Ira.
               </Typography>
               <Grid
                 container
                 direction="row"
-                justify="center"
+                justify="flex-start"
                 alignItems="flex-start"
               >
-                <Grid item xs={4} md={6}>
+                <Grid item>
                   <Typography
                     variant="h5"
                     component="p"
@@ -88,6 +86,9 @@ class Home extends Component {
                 </Grid>
               </Grid>
             </Grid>
+            {/* <Grid item xs={12} sm={5} className="body-content">
+              <img src={photo} className="Main-photo" alt="Me" />
+            </Grid> */}
           </Grid>
         </div>
       </>
