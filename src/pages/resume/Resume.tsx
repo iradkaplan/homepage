@@ -17,7 +17,15 @@ class Resume extends Component {
             justify="flex-start"
             alignItems="flex-start"
           >
-            <Grid item xs={12} sm={10} md={8} lg={6} xl={4}>
+            <Grid
+              item
+              xs={12}
+              sm={10}
+              md={8}
+              lg={6}
+              xl={4}
+              className="body-content"
+            >
               <Typography variant="body1" paragraph>
                 You can view my resume below, or click the image to open a PDF.
                 You can also{" "}
@@ -30,7 +38,7 @@ class Resume extends Component {
                 </Link>
               </Typography>
             </Grid>
-            <Grid item>
+            <Grid item className="body-content">
               <Paper className="image-paper">
                 <Link
                   to="/Ira Kaplan Resume.pdf"
