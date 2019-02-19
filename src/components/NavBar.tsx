@@ -247,7 +247,7 @@ class NavBar extends React.Component<Props & RouteComponentProps> {
               variant="permanent"
               open
             >
-              <div style={{ padding: "16px" }}>
+              <div style={{ padding: "12px 16px 16px 16px" }}>
                 <Typography
                   variant="h6"
                   classes={{ root: classes.navText }}
