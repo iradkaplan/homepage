@@ -25,7 +25,7 @@ const initialViewState = {
   bearing: 0
 };
 
-class BikeLanes extends Component {
+class GreenLanes extends Component {
   render() {
     const layers = [
       new GeoJsonLayer({
@@ -42,7 +42,7 @@ class BikeLanes extends Component {
         <Grid
           container
           direction="row"
-          justify="space-evenly"
+          justify="flex-start"
           alignItems="center"
         >
           <Grid item xs={12} className="body-content">
@@ -106,7 +106,7 @@ class BikeLanes extends Component {
             <Grid
               container
               direction="row"
-              justify="space-evenly"
+              justify="flex-start"
               alignItems="center"
             >
               <Grid item xs={12} md={6} className="body-content">
@@ -444,4 +444,4 @@ class BikeLanes extends Component {
   }
 }
 
-export default BikeLanes;
+export default GreenLanes;
