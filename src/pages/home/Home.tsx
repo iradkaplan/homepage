@@ -32,7 +32,7 @@ class Home extends Component<{ classes: any }> {
             alignItems="center"
           >
             <Grid item xs={12} className="body-content">
-              <Typography variant="h3" component="p" paragraph>
+              <Typography variant="h4" component="p" paragraph>
                 Welcome to my homepage! <br />
               </Typography>
               <Typography
