@@ -209,7 +209,7 @@ class NavBar extends React.Component<Props & RouteComponentProps> {
                   >
                     Resume
                   </MenuItem>
-                  <MenuItem classes={{ root: classes.mono }}>
+                  <MenuItem disableRipple classes={{ root: classes.mono }}>
                     Projects:
                   </MenuItem>
                   <MenuItem
