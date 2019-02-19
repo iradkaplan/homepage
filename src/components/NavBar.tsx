@@ -65,7 +65,13 @@ const styles = (theme: Theme) =>
     },
     navText: {
       color: theme.palette.primary.contrastText,
-      fontFamily: "Source Code Pro"
+      fontFamily: theme.typography.monoFonts
+    },
+    mono: {
+      fontFamily: theme.typography.monoFonts
+    },
+    label: {
+      textTransform: "capitalize"
     },
     title: {
       textAlign: "left",
@@ -131,28 +137,25 @@ class NavBar extends React.Component<Props & RouteComponentProps> {
             {" "}
             <ListItemText
               classes={{ primary: classes.navText }}
-              primary="Projects"
+              primary="Projects:"
             />
           </ListItem>
           <ListItem button key="GreenLanes" component={GreenLanesLink}>
             <ListItemText
               classes={{ primary: classes.navText }}
-              primary="SF Green Lanes"
-              inset
+              primary="-> SF Green Lanes"
             />
           </ListItem>
           <ListItem button key="SF Vote Diagrams" component={RCVLink}>
             <ListItemText
               classes={{ primary: classes.navText }}
-              primary="SF Vote Diagrams"
-              inset
+              primary="-> SF Vote Diagrams"
             />
           </ListItem>
           <ListItem button key="Homepage" component={HomepageLink}>
             <ListItemText
               classes={{ primary: classes.navText }}
-              primary="This Website"
-              inset
+              primary="-> This Website"
             />
           </ListItem>
         </List>
@@ -179,6 +182,10 @@ class NavBar extends React.Component<Props & RouteComponentProps> {
                   aria-haspopup="true"
                   onClick={this.handlers.handleMenu}
                   color="inherit"
+                  classes={{
+                    root: classes.mono,
+                    label: classes.label
+                  }}
                 >
                   Menu
                 </Button>
@@ -191,33 +198,40 @@ class NavBar extends React.Component<Props & RouteComponentProps> {
                   <MenuItem
                     component={HomeLink}
                     onClick={this.handlers.handleClose}
+                    classes={{ root: classes.mono }}
                   >
                     Home
                   </MenuItem>
                   <MenuItem
                     component={ResumeLink}
                     onClick={this.handlers.handleClose}
+                    classes={{ root: classes.mono }}
                   >
                     Resume
                   </MenuItem>
-                  <MenuItem>Projects</MenuItem>
+                  <MenuItem classes={{ root: classes.mono }}>
+                    Projects:
+                  </MenuItem>
                   <MenuItem
                     component={GreenLanesLink}
                     onClick={this.handlers.handleClose}
+                    classes={{ root: classes.mono }}
                   >
-                    SF Protected Green Lanes
+                    -> SF Green Lanes
                   </MenuItem>
                   <MenuItem
                     component={RCVLink}
                     onClick={this.handlers.handleClose}
+                    classes={{ root: classes.mono }}
                   >
-                    SF Vote Diagrams
+                    -> SF Vote Diagrams
                   </MenuItem>
                   <MenuItem
                     component={HomepageLink}
                     onClick={this.handlers.handleClose}
+                    classes={{ root: classes.mono }}
                   >
-                    This Website
+                    -> This Website
                   </MenuItem>
                 </Menu>
               </div>
