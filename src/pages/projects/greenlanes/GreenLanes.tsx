@@ -81,16 +81,16 @@ class GreenLanes extends Component {
             className="App-body body-content"
           >
             <Typography variant="body2" component="p" paragraph>
-              A quick note on terminology: the pieces of infrastructure I’m
-              discussing here are most commonly known as a “protected bike
-              lanes” or sometimes as “cycle tracks.” In this article, I instead
-              refer to them as “protected green lanes.” This term is more
-              accurate, as they exist not just for bikes, but also to serve our
-              friends on scooters, skateboards, unicycles, tricycles, and other
-              forms of micromobility. It’s also descriptive of both the actual
-              color of the best examples and their environmental friendliness.
-              In this article, I refer to biking several times, but I also mean
-              these other forms of micromobility.
+              A quick note on terminology: the type of infrastructure I’m
+              discussing here is most commonly known as a “protected bike lane”
+              or sometimes as a “cycle track.” In this article, I instead use
+              the term “protected green lane.” This term is more accurate, as
+              they exist not just for bikes, but also to serve our friends on
+              scooters, skateboards, unicycles, tricycles, and other forms of
+              micromobility. It’s also descriptive of the actual color of the
+              best examples and evocative of their environmental friendliness.
+              In this article, I refer to biking several times, but I generally
+              mean these other forms of micromobility, too.
             </Typography>
             <Typography variant="h4">
               Why is it so hard to get around San Francisco?
