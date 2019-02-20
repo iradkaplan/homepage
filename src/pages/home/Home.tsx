@@ -66,41 +66,34 @@ class Home extends Component<{ classes: any }> {
                     style={{ lineHeight: "1.2em" }}
                   >
                     I'm an: <br />
-                    urbanist.{" "}
                     <span role="img" aria-label="city emoji">
                       🌇
                     </span>{" "}
-                    <br />
-                    software developer.{" "}
+                    urbanist. <br />
                     <span role="img" aria-label="laptop emoji">
                       💻
                     </span>{" "}
-                    <br />
-                    transit geek.{" "}
+                    software developer. <br />
                     <span role="img" aria-label="trolleybus emoji">
                       🚎
                     </span>{" "}
-                    <br />
-                    coffee enthusiast.{" "}
+                    transit geek. <br />
                     <span role="img" aria-label="coffee emoji">
                       ☕️
                     </span>{" "}
-                    <br />
-                    bicyclist.{" "}
+                    coffee enthusiast. <br />
                     <span role="img" aria-label="bicycle emoji">
                       🚲
                     </span>{" "}
-                    <br />
-                    scooterer.{" "}
+                    bicyclist. <br />
                     <span role="img" aria-label="kick scooter emoji">
                       🛴
                     </span>{" "}
-                    <br />
-                    hiker.{" "}
+                    scooterer. <br />
                     <span role="img" aria-label="hiking boot emoji">
                       🥾
                     </span>{" "}
-                    <br />
+                    hiker. <br />
                   </Typography>
                 </Grid>
               </Grid>
