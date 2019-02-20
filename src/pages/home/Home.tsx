@@ -63,18 +63,9 @@ class Home extends Component<{ classes: any }> {
                     variant="h5"
                     component="p"
                     className={classes.sansSerif}
-                    style={{ textAlign: "right", lineHeight: "1.2em" }}
+                    style={{ lineHeight: "1.2em" }}
                   >
-                    I'm an&nbsp;
-                  </Typography>
-                </Grid>
-                <Grid item xs={8} md={6}>
-                  <Typography
-                    variant="h5"
-                    component="p"
-                    className={classes.sansSerif}
-                    style={{ textAlign: "left", lineHeight: "1.2em" }}
-                  >
+                    I'm an: <br />
                     urbanist.{" "}
                     <span role="img" aria-label="city emoji">
                       🌇
@@ -114,9 +105,6 @@ class Home extends Component<{ classes: any }> {
                 </Grid>
               </Grid>
             </Grid>
-            {/* <Grid item xs={12} sm={5} className="body-content">
-              <img src={photo} className="Main-photo" alt="Me" />
-            </Grid> */}
           </Grid>
         </div>
       </>
