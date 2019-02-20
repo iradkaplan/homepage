@@ -101,6 +101,11 @@ const styles = (theme: Theme) =>
     content: {
       flexGrow: 1,
       padding: theme.spacing.unit * 3
+    },
+    menu: {
+      [theme.breakpoints.up("sm")]: {
+        display: "none"
+      }
     }
   });
 
@@ -249,6 +254,7 @@ class NavBar extends React.Component<Props & RouteComponentProps> {
                   anchorEl={projectMenuAnchor}
                   open={Boolean(projectMenuAnchor)}
                   onClose={this.handlers.handleClose}
+                  className={classes.menu}
                 >
                   <MenuItem
                     component={HomeLink}
