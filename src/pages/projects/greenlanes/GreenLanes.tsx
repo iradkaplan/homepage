@@ -109,7 +109,13 @@ class GreenLanes extends Component {
               justify="flex-start"
               alignItems="center"
             >
-              <Grid item xs={12} md={6} className="body-content">
+              <Grid
+                item
+                xs={12}
+                md={6}
+                className="body-content"
+                style={{ padding: "5px" }}
+              >
                 <Paper className="image-paper">
                   <img
                     src={SFBikeMap}
@@ -128,8 +134,15 @@ class GreenLanes extends Component {
                     </Link>
                   </Typography>
                 </Paper>
+                <p />
               </Grid>
-              <Grid item xs={12} md={6} className="body-content">
+              <Grid
+                item
+                xs={12}
+                md={6}
+                className="body-content"
+                style={{ padding: "5px" }}
+              >
                 <Paper className="image-paper">
                   <img
                     src={GoogleBikeMap}
@@ -148,6 +161,7 @@ class GreenLanes extends Component {
                     </Link>
                   </Typography>
                 </Paper>
+                <p />
               </Grid>
             </Grid>
             <Typography variant="body1" component="p" paragraph>
@@ -223,6 +237,7 @@ class GreenLanes extends Component {
                   </Link>
                 </Typography>
               </Paper>
+              <p />
             </Grid>
             <Typography variant="body1" component="p" paragraph>
               Seville built a comprehensive protected green lane network from
@@ -256,6 +271,7 @@ class GreenLanes extends Component {
                   </Link>
                 </Typography>
               </Paper>
+              <p />
             </Grid>
             <Typography variant="body1" component="p" paragraph>
               San Francisco, to its credit, has been building its network of
