@@ -303,8 +303,8 @@ class GreenLanes extends Component {
                   </Link>
                 </Typography>
               </Paper>
+              <p />
             </Grid>
-            <p />
             <Typography variant="h5">
               Why are protected lanes so important?
             </Typography>
