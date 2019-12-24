@@ -5,6 +5,7 @@ import { StaticMap } from "react-map-gl";
 import Typography from "@material-ui/core/Typography";
 import Paper from "@material-ui/core/Paper";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 import "mapbox-gl/dist/mapbox-gl.css";
 import "./GreenLanes.css";
 import data from "./greenLaneData.json";
@@ -39,6 +40,26 @@ class GreenLanes extends Component {
     ];
     return (
       <>
+        <Helmet>
+          <title>Ira Kaplan - Mapping San Francisco's Protected Lanes</title>
+          <meta
+            property="og:title"
+            content="Mapping San Francisco's Protected Lanes"
+          />
+          <meta
+            property="og:description"
+            content="San Francisco has been working to create protected bike lanes around town. Has it worked?"
+          />
+          <meta property="og:type" content="article" />
+          <meta
+            property="og:url"
+            content="https://irakaplan.io/projects/greenlanes"
+          />
+          <meta
+            property="og:image"
+            content="https://irakaplan.io/projects/greenlanes/greenlanes.png"
+          />
+        </Helmet>
         <Grid
           container
           direction="row"
