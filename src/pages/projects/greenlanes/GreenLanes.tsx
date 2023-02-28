@@ -53,11 +53,11 @@ class GreenLanes extends Component {
           <meta property="og:type" content="article" />
           <meta
             property="og:url"
-            content="https://irakaplan.io/projects/greenlanes"
+            content="https://irakaplan.dev/projects/greenlanes"
           />
           <meta
             property="og:image"
-            content="https://irakaplan.io/projects/greenlanes/greenlanes.png"
+            content="https://irakaplan.dev/projects/greenlanes/greenlanes.png"
           />
         </Helmet>
         <Grid
