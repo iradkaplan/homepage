@@ -41,7 +41,7 @@ class App extends Component<{ store: Store<ApplicationState> }> {
         <Router>
           <MuiThemeProvider theme={theme}>
             <div className="App">
-              <NavBar>
+              <NavBar dispatch={undefined} projectMenuAnchor={null}>
                 <Switch>
                   <Route path="/" exact component={AsyncHome} />
                   <Route path="/resume/" component={AsyncResume} />

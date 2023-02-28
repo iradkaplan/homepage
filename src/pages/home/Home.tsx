@@ -4,7 +4,6 @@ import { withStyles } from "@material-ui/core/styles";
 import photo from "./photo.jpg";
 import "./Home.css";
 import { Typography, Theme, createStyles } from "@material-ui/core";
-import { CSSProperties } from "@material-ui/core/styles/withStyles";
 
 const styles = (theme: Theme) =>
   createStyles({
@@ -41,7 +40,7 @@ class Home extends Component<{ classes: any }> {
                 className={classes.alignLeft}
                 paragraph
               >
-                (We're bringing them back in 2019)
+                (We're bringing them back in 2023)
               </Typography>
               <img src={photo} className="Main-photo" alt="Me" />
               <Typography
@@ -65,15 +64,19 @@ class Home extends Component<{ classes: any }> {
                     className={classes.sansSerif}
                     style={{ lineHeight: "1.2em" }}
                   >
-                    I'm an: <br />
-                    <span role="img" aria-label="city emoji">
-                      🌇
-                    </span>{" "}
-                    urbanist. <br />
+                    I'm a: <br />
                     <span role="img" aria-label="laptop emoji">
                       💻
                     </span>{" "}
                     software developer. <br />
+                    <span role="img" aria-label="bicycle emoji">
+                      🚲
+                    </span>{" "}
+                    bicyclist. <br />
+                    <span role="img" aria-label="city emoji">
+                      🌇
+                    </span>{" "}
+                    urbanist. <br />
                     <span role="img" aria-label="trolleybus emoji">
                       🚎
                     </span>{" "}
@@ -82,18 +85,10 @@ class Home extends Component<{ classes: any }> {
                       ☕️
                     </span>{" "}
                     coffee enthusiast. <br />
-                    <span role="img" aria-label="bicycle emoji">
-                      🚲
+                    <span role="img" aria-label="dog face emoji">
+                      🐶
                     </span>{" "}
-                    bicyclist. <br />
-                    <span role="img" aria-label="kick scooter emoji">
-                      🛴
-                    </span>{" "}
-                    scooterer. <br />
-                    <span role="img" aria-label="hiking boot emoji">
-                      🥾
-                    </span>{" "}
-                    hiker. <br />
+                    pet lover. <br />
                   </Typography>
                 </Grid>
               </Grid>

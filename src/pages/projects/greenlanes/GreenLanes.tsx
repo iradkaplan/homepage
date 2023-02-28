@@ -72,6 +72,16 @@ class GreenLanes extends Component {
             </Typography>
           </Grid>
           <Grid item xs={12} className="body-content">
+            <Typography variant="h6">
+              Note: This map is out of date! Since it was last updated, San
+              Francisco has added many protected lanes. That's great! But
+              keeping up with drawing all of the changes in GIS got to be a lot
+              of work. You can find a full revision history at the bottom of
+              this page, but for now, treat this as a historical artifact from a
+              specific moment in time.
+            </Typography>
+          </Grid>
+          <Grid item xs={12} className="body-content">
             <div
               style={{
                 position: "relative",
